@@ -1,7 +1,6 @@
 .agb {
   &__content {
     width: 100%;
-    max-width: 918px;
     font-size: 22px;
     line-height: 1.6;
     letter-spacing: 0.04em;
@@ -17,6 +16,10 @@
 
     p {
       margin-bottom: 50px;
+    }
+
+    >*:not(h1) {
+      max-width: 918px;
     }
   }
 

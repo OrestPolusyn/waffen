@@ -712,7 +712,6 @@
 
 .agb__content {
   width: 100%;
-  max-width: 918px;
   font-size: 22px;
   line-height: 1.6;
   letter-spacing: 0.04em;
@@ -727,6 +726,9 @@
 }
 .agb__content p {
   margin-bottom: 50px;
+}
+.agb__content > *:not(h1) {
+  max-width: 918px;
 }
 .agb ul li {
   position: relative;
