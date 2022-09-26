@@ -1,0 +1,21 @@
+@include('html/_head.html',{
+title:'Suchergebnisse für'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+
+        @include('html/search/_result.html')
+
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+</body>
+
+</html>

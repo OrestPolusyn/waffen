@@ -1,0 +1,60 @@
+.tabs {
+  &__content {
+    margin-bottom: clamp(20px, rem(35), 50px);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__btns {
+    @include flex;
+
+    margin-bottom: clamp(20px, rem(50), 50px);
+
+    li {
+      &:not(:last-child) {
+        margin-right: clamp(15px, rem(30), 30px);
+      }
+    }
+  }
+
+  &__btn {
+    border: 1px solid transparent;
+    padding: 9px clamp(15px, rem(28), 28px);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: var(--color-gray);
+    background-color: var(--color-noactive);
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      border-color: var(--color-active);
+      color: var(--color-active);
+      background-color: var(--color-black);
+    }
+
+    &:hover {
+      border-color: var(--color-white);
+      color: var(--color-white);
+      background-color: var(--color-black);
+    }
+
+    &:active {
+      border-color: var(--color-active);
+      color: var(--color-active);
+      background-color: var(--color-black);
+    }
+
+    &--active {
+      color: var(--color-active);
+      background-color: var(--color-white);
+    }
+  }
+}

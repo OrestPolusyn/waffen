@@ -1,0 +1,82 @@
+.categories {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 95px);
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &--waffen {
+      grid-row: 1 / span 3;
+    }
+
+    &--magazine {
+      grid-row: 1 / span 2;
+    }
+
+    &--munition {
+      grid-row: 3 / span 2;
+    }
+
+    &--waffenteile {
+      grid-area: 7/2/5/3;
+    }
+
+    &--optik {
+      grid-row: 4 / span 3;
+    }
+
+    &--zubehor {
+      grid-row: 1 / span 3;
+    }
+
+    &--vorankundigung {
+      grid-row: 4 / span 3;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 29px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid transparent;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-black);
+      opacity: 0.8;
+      transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in;
+      cursor: pointer;
+    }
+
+    &:focus {
+      &::before {
+        border-color: var(--color-active);
+      }
+
+      h3 {
+        color: var(--color-active);
+      }
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.9;
+      }
+    }
+  }
+}

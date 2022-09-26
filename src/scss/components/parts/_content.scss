@@ -1,0 +1,32 @@
+.title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 80px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  &--main {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 120px;
+  }
+
+  &--name {
+    font-weight: 500;
+    font-size: 29px;
+    letter-spacing: 0.05em;
+  }
+
+  &--card {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.content {
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}

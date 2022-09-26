@@ -1,0 +1,14 @@
+.btn-reset {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn {
+  @include flex-all-center;
+
+  border: 1px solid var(--color-active);
+  padding: 21px clamp(20px, rem(33), 50px);
+  width: fit-content;
+  color: var(--color-active);
+  background-color: var(--color-white);
+}

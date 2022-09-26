@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: 0.5px solid var(--color-black);
+  width: 100%;
+  background-color: rgba(27, 27, 27, 0.8);
+
+  &__inner {
+    @include flex-all-sb;
+
+    padding: 37px 0 30px;
+  }
+}

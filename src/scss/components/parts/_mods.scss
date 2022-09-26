@@ -1,0 +1,58 @@
+.mod {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(34);
+    gap: 30px;
+  }
+
+  &__text-add {
+    margin-bottom: rem(35);
+    max-width: 920px;
+    letter-spacing: 0.03em;
+  }
+
+  &__archiv {
+    font-size: 22px;
+
+    &--columns {
+      column-count: 3;
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__archiv-list {
+    display: flex;
+  }
+
+  &__archiv-block {
+    &:not(:last-child) {
+      margin-right: clamp(25px, rem(50), 50px);
+    }
+  }
+
+  &__archiv-item {
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-active);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-size: 45px;
+  }
+}

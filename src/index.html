@@ -1,0 +1,28 @@
+@include('html/_head.html',{
+title:'Heimat'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main main--clean">
+
+      @include('html/home/_hero.html')
+
+      <div class="container">
+        @include('html/home/_special.html')
+
+        @include('html/home/_categories.html')
+
+        @include('html/parts/_popular.html')
+
+        @include('html/contact/_contact.html')
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+</body>
+
+</html>

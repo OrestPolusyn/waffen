@@ -1,0 +1,69 @@
+.hero {
+  @include image-set("../img/hero.jpg");
+  @include flex-v-center;
+
+  position: relative;
+  min-height: 900px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0.36;
+    filter: blur(5px);
+  }
+
+  &__content {
+    position: relative;
+    padding-top: rem(65);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: rem(42);
+    letter-spacing: 0.04em;
+  }
+
+  &__mouse {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--color-white);
+    border-radius: 100px;
+    width: 40px;
+    height: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 19px;
+      background-color: var(--color-white);
+      animation: mouse 2s linear 0.1s infinite;
+    }
+  }
+}
+
+@keyframes mouse {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 30px;
+    opacity: 1;
+  }
+}

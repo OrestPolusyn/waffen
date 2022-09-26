@@ -1,0 +1,25 @@
+.site-map {
+  &__pages {
+    @include flex-sb;
+  }
+
+  &__column {
+    &:not(:last-child) {
+      margin-right: rem(40);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(22);
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}

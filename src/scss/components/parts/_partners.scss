@@ -1,0 +1,44 @@
+.partners {
+  width: 100%;
+  max-width: 1100px;
+
+  &__item {
+    @include flex-v-center;
+
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__image {
+    margin-right: 50px;
+  }
+
+  &__desc {
+    padding-top: 15px;
+
+    p {
+      margin-bottom: 36px;
+      letter-spacing: 0.03em;
+    }
+
+    a {
+      position: relative;
+      text-decoration: underline;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -34px;
+        bottom: 10px;
+        mask-image: url("../img/sprite.svg#arrow");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        width: 16px;
+        height: 15px;
+        background-color: var(--color-white);
+      }
+    }
+  }
+}

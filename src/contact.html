@@ -1,0 +1,25 @@
+@include('html/_head.html',{
+title:'Kontakt'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+        @include('html/contact/_contact.html')
+      </div>
+
+      <div class="map">
+        <a class="map__link" href="#">
+          <img class="map__image" src="./img/map.jpg" width="1600" height="685" alt="Google maps" loading="lazy">
+        </a>
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+</body>
+
+</html>

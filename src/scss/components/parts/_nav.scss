@@ -1,0 +1,13 @@
+.nav {
+  margin-bottom: rem(35);
+
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(50);
+    }
+  }
+}

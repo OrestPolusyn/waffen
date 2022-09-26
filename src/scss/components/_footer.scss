@@ -1,0 +1,44 @@
+.footer {
+  margin-top: auto;
+  padding: rem(36) 0;
+  background-color: var(--color-black);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    row-gap: rem(60);
+  }
+
+  &__item {
+    font-size: 22px;
+
+    &--copy {
+      width: 100%;
+      max-width: 325px;
+    }
+
+    &--logo {
+      align-self: center;
+      justify-self: center;
+      grid-area: 1/2/3/2;
+    }
+
+    &--mark {
+      @include flex;
+
+      span {
+        margin-right: 20px;
+      }
+    }
+
+    &--policy {
+      text-align: end;
+    }
+
+    &--social {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+}

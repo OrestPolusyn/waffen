@@ -1,0 +1,58 @@
+<section class="tabs section">
+
+  <h2 class="tabs__title title">
+    beliebte Produkte
+  </h2>
+
+  <div class="tabs__content">
+    @include('../parts/_filter.html')
+
+    <ul class="tabs__cards">
+      @loop('../parts/_card.html',[{
+      new:'',
+      sale:'',
+      image:'sig',
+      code:'FFW3550',
+      name:'SIG P320 RX Fullsize Pistole',
+      desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+      price:'1 450 CHF',
+      oldprice:''
+      },
+      {
+      new:'',
+      sale:'',
+      image:'apc9',
+      code:'AA195',
+      name:'B&T APC9 Pro G Maschinenpistole',
+      desc:'Kal. 9mm Para Neuwaffe',
+      price:'2 650 CHF',
+      oldprice:''
+      },
+      {
+      new:'',
+      sale:'',
+      image:'spc9',
+      code:'AA182',
+      name:'B&T SPC9 SD PDW Halbautomat',
+      desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+      price:'3 190 CHF',
+      oldprice:''
+      },
+      {
+      new:'',
+      sale:'',
+      image:'cz',
+      code:'AA191',
+      name:'CZ Full Auto BREN 2 Br',
+      desc:'Full Auto LL 16" Kal. 308 Win.',
+      price:'4 850 CHF',
+      oldprice:''
+      }])
+    </ul>
+
+  </div>
+
+  <a class="hero__btn btn btn-reset" href="#">
+    Ausführlicher
+  </a>
+</section>

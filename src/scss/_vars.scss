@@ -1,0 +1,17 @@
+// colors
+:root {
+  // base
+  --font-family: "Jost", sans-serif;
+  --content-width: 1440px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --color-bg: #1b1b1b;
+  --color-white: #f4f4f4;
+  --color-black: #000;
+  --color-gray: #313740;
+  --color-active: #b50e1b;
+  --color-noactive: #6f7b8a;
+  --color-red: #92181f;
+}

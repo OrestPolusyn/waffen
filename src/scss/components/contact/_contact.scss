@@ -1,0 +1,77 @@
+.contact {
+  &__list {
+    @include flex-sb;
+
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: 0;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      width: 22px;
+      height: 20px;
+      background-color: var(--color-white);
+    }
+
+    a {
+      display: block;
+    }
+
+    address {
+      max-width: 190px;
+      line-height: 2.1;
+      transform: translateY(-5px);
+    }
+
+    >* {
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-bottom: 17px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        mask-image: url("../img/sprite.svg#mail");
+      }
+    }
+
+    &--phone {
+      &::before {
+        left: 4px;
+        mask-image: url("../img/sprite.svg#phone");
+      }
+    }
+
+    &--pin {
+      &::before {
+        left: 5px;
+        top: -2px;
+        mask-image: url("../img/sprite.svg#pin");
+        width: 26px;
+        height: 24px;
+      }
+    }
+
+    &--schedule {
+      &::before {
+        top: -1px;
+        mask-image: url("../img/sprite.svg#schedule");
+        width: 25px;
+        height: 22px;
+      }
+    }
+  }
+}
