@@ -16,6 +16,10 @@
     position: relative;
     width: 100%;
 
+    img {
+      width: 100%;
+    }
+
     span {
       position: absolute;
 
@@ -52,6 +56,10 @@
     margin-bottom: 28px;
     min-height: 60px;
     letter-spacing: 0.055em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   &__price {
@@ -86,6 +94,7 @@
 
     margin-bottom: 0;
     min-height: 70px;
+    font-size: 22px;
     text-transform: none;
   }
 
@@ -118,5 +127,13 @@
 
   &:active {
     border-color: var(--color-red);
+  }
+
+  @include for-width(-laptop) {
+    padding: 15px;
+  }
+
+  @include for-width(-tablet) {
+    padding: 10px;
   }
 }

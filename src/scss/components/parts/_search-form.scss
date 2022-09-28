@@ -1,19 +1,39 @@
 .search-form {
   position: relative;
+  margin-right: rem(35);
+  margin-left: auto;
   width: 100%;
   max-width: 300px;
 
   &__btn {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
+    right: 12px;
+    top: 50%;
+    width: 25px;
+    height: 25px;
     background-color: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 
   &__input {
+    padding: 9px 10px;
     width: 100%;
+    max-height: 50px;
+
+    &:focus {
+      color: var(--color-bg);
+      background-color: var(--color-white);
+    }
+
+    &:active {
+      color: var(--color-bg);
+      background-color: var(--color-white);
+    }
+
+    @include for-width(-laptop-mac) {
+      padding: 5px 10px;
+    }
   }
 
   &__icon {
@@ -24,5 +44,13 @@
     height: 100%;
     fill: transparent;
     stroke: var(--color-gray);
+  }
+
+  @include for-width(-laptop-mac) {
+    max-width: 220px;
+  }
+
+  @include for-width(-tablet) {
+    margin-right: 20px;
   }
 }

@@ -12,6 +12,10 @@
         margin-bottom: 15px;
       }
     }
+
+    @include for-width(-laptop-mac) {
+      padding: rem(20);
+    }
   }
 
   h3 {
@@ -33,11 +37,13 @@
 
   dt {
     margin-right: 10px;
+    white-space: nowrap;
     text-transform: capitalize;
     color: var(--color-noactive);
   }
 
   dd {
+    white-space: nowrap;
     color: var(--color-white);
   }
 }

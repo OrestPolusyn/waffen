@@ -32,7 +32,6 @@
   @include flex;
 
   flex-direction: column;
-  overflow: hidden;
   min-height: 100vh;
 }
 
@@ -67,22 +66,53 @@
   width: 100%;
   height: 100vh;
   overscroll-behavior: none;
+
+
 }
 
 .section {
   margin-bottom: clamp(100px, rem(190), 190px);
+
+  @include for-width(-laptop) {
+    margin-bottom: clamp(70px, rem(140), 140px);
+  }
+
+  @include for-width(-laptop-mac) {
+    margin-bottom: clamp(40px, rem(100), 100px);
+  }
 }
 
 .input-reset {
   border-color: transparent;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
   background-color: var(--color-noactive);
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
 }
 
 .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
   display: block;
   margin: 0 auto;
   width: fit-content;
-  transform: translateX(-62%);
+  transform: translateY(-50%);
+
+  @include for-width(-tablet) {
+    display: none;
+  }
+
+  &--mob {
+    @include for-width(-tablet) {
+      display: block;
+    }
+  }
 }
 
 .main {
@@ -96,7 +126,6 @@
 .map {
   position: relative;
   margin: 0 auto;
-  min-height: 685px;
 
   &::before {
     content: "";
@@ -111,5 +140,26 @@
 
   &__image {
     width: 100%;
+  }
+}
+
+.scroll {
+  overflow: auto;
+  padding-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--color-active);
   }
 }

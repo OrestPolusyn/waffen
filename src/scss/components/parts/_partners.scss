@@ -8,18 +8,37 @@
     &:not(:last-child) {
       margin-bottom: 52px;
     }
+
+    @include for-width(-mobile-md) {
+      display: block;
+      max-width: 350px;
+    }
   }
 
   &__image {
     margin-right: 50px;
+
+    @include for-width(-mobile-l) {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    @include for-width(-mobile-md) {
+      max-width: none;
+    }
   }
 
   &__desc {
     padding-top: 15px;
+    font-size: 22px;
 
     p {
       margin-bottom: 36px;
       letter-spacing: 0.03em;
+
+      @include for-width(-mobile-l) {
+        margin-bottom: 20px;
+      }
     }
 
     a {
@@ -38,6 +57,10 @@
         width: 16px;
         height: 15px;
         background-color: var(--color-white);
+
+        @include for-width(-laptop-mac) {
+          bottom: 3px;
+        }
       }
     }
   }

@@ -16,10 +16,10 @@
 // window.addEventListener('resize', func);
 
 // Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
+import "./functions/fix-fullheight";
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from "./functions/burger";
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -36,7 +36,6 @@
 // const tabs = new GraphTabs('tab');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';

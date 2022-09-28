@@ -3,7 +3,7 @@
   @include flex-v-center;
 
   position: relative;
-  min-height: 900px;
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,10 +21,14 @@
 
   &__content {
     position: relative;
+    display: flex;
+    flex-direction: column;
     padding-top: rem(65);
+    height: 100vh;
   }
 
   &__title {
+    margin-top: auto;
     margin-bottom: 10px;
   }
 
@@ -36,11 +40,12 @@
   &__mouse {
     position: relative;
     display: block;
-    margin: 0 auto;
+    margin: auto auto rem(35);
     border: 2px solid var(--color-white);
     border-radius: 100px;
     width: 40px;
     height: 60px;
+
 
     &::before {
       content: "";

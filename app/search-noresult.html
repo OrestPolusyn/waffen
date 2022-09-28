@@ -24,58 +24,67 @@
     <header class="header">
   <div class="container">
     <div class="header__inner">
-      <div class="header__menu">
-        <nav class="nav">
-          <ul class="nav__list">
+      <a class="header__logo-mob" href="#">
+        <img class="header__logo-img" src="./img/logо-mob.svg" alt="Joray Marius Waffen und Feinmechanik AG logo" width="150" height="100">
+      </a>
 
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                Sortiment
-              </a>
-            </li>
+      <nav class="nav" data-menu>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--dropdown">
+              Sortiment
+            </a>
 
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                Spezial Angebot
-              </a>
-            </li>
+            <ul class="nav__dropdown">
+              <li class="nav__dropdown-item"></li>
+            </ul>
+          </li>
 
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                AGB
-              </a>
-            </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Spezial Angebot
+            </a>
+          </li>
 
-          </ul>
-        </nav>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              AGB
+            </a>
+          </li>
 
-        <a class="header__phone" href="tel:+41(061)7614055">
-          +41 (061) 761 40 55
-        </a>
-      </div>
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--dropdown">
+              Zu Kunden
+            </a>
+
+            <ul class="nav__dropdown">
+              <li class="nav__dropdown-item"></li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Kontakt
+            </a>
+          </li>
+
+          <li class="nav__item nav__item--mob">
+            <a class="nav__link" href="tel:+41(061)7614055">
+              +41 (061) 761 40 55
+            </a>
+          </li>
+        </ul>
+      </nav>
 
       <a class="logo" href="#">
         <img class="logo__img" src="img/logo.svg" alt="Joray Marius Waffen und Feinmechanik AG logo" width="150"
           height="100">
       </a>
 
-      <div class="header__menu">
-
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                Zu Kunden
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                Kontakt
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="header__action">
+        <a class="header__phone" href="tel:+41(061)7614055">
+          +41 (061) 761 40 55
+        </a>
 
         <form class="search-form" action="#">
 
@@ -94,10 +103,28 @@
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
           </button>
-
         </form>
 
+        <div class="cart cart--active">
+          <a class="cart__link" href="#">
+            <svg class="cart__icon">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+
+            <span class="cart__price">
+              1 450 CHF
+            </span>
+
+            <span class="cart__count">
+              1
+            </span>
+          </a>
+        </div>
       </div>
+
+      <button class="burger" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </div>
 </header>
@@ -141,7 +168,7 @@
   </h2>
 
   <div class="tabs__content">
-    <ul class="tabs__btns">
+    <ul class="tabs__btns scroll">
   <li>
     <button class="tabs__btn tabs__btn--active" type="button" data-tab-target="alle">
       alle
@@ -386,7 +413,7 @@
 
   </div>
 
-  <a class="hero__btn btn btn-reset" href="#">
+  <a class="tabs__more btn btn-reset" href="#">
     Ausführlicher
   </a>
 </section>

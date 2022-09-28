@@ -1,6 +1,16 @@
 .site-map {
   &__pages {
-    @include flex-sb;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(50) rem(30);
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__column {
@@ -11,6 +21,8 @@
 
   &__subtitle {
     margin-bottom: 30px;
+    font-size: 29px;
+    white-space: nowrap;
   }
 
   &__item {
@@ -20,6 +32,7 @@
   }
 
   &__link {
+    font-size: 22px;
     text-decoration: underline;
   }
 }

@@ -5,6 +5,21 @@
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.06em;
+
+    @include for-width(-laptop-mac) {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: repeat(2, 1fr);
+      margin: 0 auto;
+      max-width: 900px;
+      gap: 30px;
+    }
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      max-width: 450px;
+    }
   }
 
   &__item {
@@ -32,6 +47,10 @@
       max-width: 190px;
       line-height: 2.1;
       transform: translateY(-5px);
+
+      @include for-width(-laptop-mac) {
+        max-width: none;
+      }
     }
 
     >* {
@@ -53,6 +72,10 @@
         left: 4px;
         mask-image: url("../img/sprite.svg#phone");
       }
+
+      @include for-width(-laptop-mac) {
+        order: 3;
+      }
     }
 
     &--pin {
@@ -63,6 +86,10 @@
         width: 26px;
         height: 24px;
       }
+
+      @include for-width(-laptop-mac) {
+        order: 2;
+      }
     }
 
     &--schedule {
@@ -71,6 +98,10 @@
         mask-image: url("../img/sprite.svg#schedule");
         width: 25px;
         height: 22px;
+      }
+
+      @include for-width(-laptop-mac) {
+        order: 4;
       }
     }
   }

@@ -5,9 +5,10 @@
 
 .btn {
   @include flex-all-center;
+  @include adaptive_size("font-size", 22, 16);
 
   border: 1px solid var(--color-active);
-  padding: 21px clamp(20px, rem(33), 50px);
+  padding: 21px clamp(20px, rem(35), 50px);
   width: fit-content;
   color: var(--color-active);
   background-color: var(--color-white);
