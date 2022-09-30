@@ -1,0 +1,23 @@
+.recomended {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+
+    @include for-width(-laptop-mac) {
+      grid-template-columns: repeat(2, minmax(275px, 420px));
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    @include for-width(-tablet) {
+      gap: 15px;
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+      max-width: 475px;
+      gap: 25px;
+    }
+  }
+}

@@ -12,4 +12,9 @@
   width: fit-content;
   color: var(--color-active);
   background-color: var(--color-white);
+
+  &--reverse {
+    color: var(--color-white);
+    background-color: var(--color-active);
+  }
 }

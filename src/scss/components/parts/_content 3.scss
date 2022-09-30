@@ -1,0 +1,62 @@
+.title {
+  @include adaptive_size("font-size", 80, 25);
+
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+  text-transform: uppercase;
+
+  @include for-width(+desktop) {
+    font-size: 80px;
+  }
+
+  @include for-width(-mobile-l) {
+    margin-bottom: 20px;
+  }
+
+  &--main {
+    @include adaptive_size("font-size", 120, 60);
+
+    margin-bottom: 10px;
+    font-weight: 800;
+
+    @include for-width(+desktop) {
+      font-size: 120px;
+    }
+  }
+
+  &--name {
+    @include adaptive_size("font-size", 29, 18);
+
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    @include for-width(+desktop) {
+      font-size: 29px;
+    }
+  }
+
+  &--card {
+    @include adaptive_size("font-size", 22, 16);
+
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+    @include for-width(+desktop) {
+      font-size: 22px;
+    }
+  }
+}
+
+.content {
+  @include adaptive_size("font-size", 22, 16);
+
+  letter-spacing: 0.06em;
+
+  @include for-width(+desktop) {
+    font-size: 22px;
+  }
+}

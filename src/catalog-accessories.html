@@ -1,0 +1,35 @@
+@include('html/_head.html',{
+title:'Sortiment'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+
+        <div class="catalog section">
+
+          <h1 class="catalog__title title">
+            Sortiment
+          </h1>
+
+          @include('./html/catalog/_sort.html')
+
+          @include('./html/catalog/_accessories.html')
+
+          @include('./html/catalog/_catalog-list.html')
+
+          @include('./html/parts/_filter.html')
+
+        </div>
+
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+</body>
+
+</html>

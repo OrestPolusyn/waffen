@@ -1,0 +1,51 @@
+.single-nav {
+  @include flex-all-sb;
+
+  margin-bottom: clamp(20px, rem(35), 50px);
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+
+  a {
+    position: relative;
+    text-decoration: underline;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      mask-image: url("../img/sprite.svg#arrow");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-white);
+    }
+
+    &:first-child {
+      &::before {
+        left: 0;
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      a {
+        padding-left: 35px;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      a {
+        padding-right: 35px;
+      }
+    }
+  }
+}

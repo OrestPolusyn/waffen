@@ -1,5 +1,5 @@
 .nav {
-  margin-bottom: rem(25);
+  margin-bottom: clamp(25px, rem(33), 40px);
 
   &__list {
     @include flex-v-center;
@@ -12,7 +12,7 @@
 
   &__item {
     &:not(:nth-child(5)) {
-      margin-right: rem(30);
+      margin-right: clamp(25px, rem(45), 55px);
 
       @include for-width(-tablet) {
         margin-right: 0;

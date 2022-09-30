@@ -1,0 +1,67 @@
+.partners {
+  width: 100%;
+  max-width: 1100px;
+
+  &__item {
+    @include flex-v-center;
+
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
+
+    @include for-width(-mobile-md) {
+      display: block;
+      max-width: 350px;
+    }
+  }
+
+  &__image {
+    margin-right: 50px;
+
+    @include for-width(-mobile-l) {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    @include for-width(-mobile-md) {
+      max-width: none;
+    }
+  }
+
+  &__desc {
+    padding-top: 15px;
+    font-size: 22px;
+
+    p {
+      margin-bottom: 36px;
+      letter-spacing: 0.03em;
+
+      @include for-width(-mobile-l) {
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      position: relative;
+      text-decoration: underline;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -34px;
+        bottom: 10px;
+        mask-image: url("../img/sprite.svg#arrow");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        width: 16px;
+        height: 15px;
+        background-color: var(--color-white);
+
+        @include for-width(-laptop-mac) {
+          bottom: 3px;
+        }
+      }
+    }
+  }
+}

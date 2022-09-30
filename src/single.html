@@ -1,0 +1,24 @@
+@include('html/_head.html',{
+title:'Product'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+
+        @include("./html/single/_navigation.html")
+
+        @include("./html/single/_recomend.html")
+
+        @include("./html/contact/_contact.html")
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+</body>
+
+</html>

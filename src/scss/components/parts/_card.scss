@@ -1,7 +1,11 @@
 .waffen {
+  @include flex;
+
   position: relative;
+  flex-direction: column;
   border: 1px solid transparent;
   padding: clamp(20px, rem(30), 30px) clamp(20px, rem(30), 30px) clamp(30px, rem(45), 45px);
+  height: 100%;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.06em;
@@ -53,19 +57,17 @@
   &__desc {
     @include flex-v-center;
 
+    position: relative;
     margin-bottom: 28px;
-    min-height: 60px;
+    min-height: 63px;
     letter-spacing: 0.055em;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
   }
 
   &__price {
     @include flex-sb;
 
     align-items: flex-start;
+    margin-top: auto;
     margin-bottom: 30px;
   }
 
@@ -87,6 +89,62 @@
     font-size: 22px;
     color: var(--color-black);
     cursor: pointer;
+  }
+
+  &__munition-btn {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding: 10px;
+    width: 100%;
+    max-height: 50px;
+    text-transform: capitalize;
+
+    span {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -25%;
+        top: 50%;
+        mask-image: url("../img/sprite.svg#arrow");
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-active);
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+
+  &__munition-list {
+    position: absolute;
+    top: 99%;
+    border: 1px solid var(--color-active);
+    width: 100%;
+    background-color: var(--color-white);
+    opacity: 0;
+    visibility: hidden;
+
+    li {
+      padding: 10px;
+      text-align: center;
+      text-transform: capitalize;
+      color: var(--color-noactive);
+
+      &:focus {
+        color: var(--color-white);
+        background-color: var(--color-active);
+      }
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-active);
+      }
+    }
   }
 
   h3 {

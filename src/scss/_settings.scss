@@ -66,8 +66,6 @@
   width: 100%;
   height: 100vh;
   overscroll-behavior: none;
-
-
 }
 
 .section {
@@ -95,31 +93,24 @@
 }
 
 .logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
   display: block;
   margin: 0 auto;
   width: fit-content;
-  transform: translateY(-50%);
-
-  @include for-width(-tablet) {
-    display: none;
-  }
-
-  &--mob {
-    @include for-width(-tablet) {
-      display: block;
-    }
-  }
 }
 
 .main {
-  padding-top: rem(170);
+  padding-top: rem(185);
 
   &--clean {
     padding-top: 0;
+  }
+
+  @include for-width(-laptop-mac) {
+    padding-top: rem(150);
+  }
+
+  @include for-width(-tablet) {
+    padding-top: rem(125);
   }
 }
 
@@ -140,14 +131,20 @@
 
   &__image {
     width: 100%;
+
+    @include for-width(-mobile-l) {
+      min-height: 300px;
+    }
   }
 }
 
 .scroll {
   overflow: auto;
+  padding-right: 5px;
   padding-bottom: 10px;
 
   &::-webkit-scrollbar {
+    width: 4px;
     height: 4px;
   }
 
@@ -161,5 +158,27 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: var(--color-active);
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+}
+
+.catalog-filter {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0.4;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
   }
 }

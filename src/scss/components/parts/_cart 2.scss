@@ -1,0 +1,47 @@
+.cart {
+  position: relative;
+  color: var(--color-noactive);
+
+  &__link {
+    @include flex-v-center;
+  }
+
+  &__icon {
+    height: 28px;
+    min-width: 30px;
+    max-width: 32px;
+    fill: currentColor
+  }
+
+  &__count {
+    @include flex-all-center;
+
+    position: absolute;
+    left: -1px;
+    bottom: 1px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--color-white);
+    background-color: var(--color-active);
+  }
+
+  &__price {
+    white-space: nowrap;
+
+    @include for-width(-tablet) {
+      display: none;
+    }
+  }
+
+  &--active {
+    color: var(--color-white);
+
+    .cart__icon {
+      margin-right: 15px;
+    }
+  }
+}

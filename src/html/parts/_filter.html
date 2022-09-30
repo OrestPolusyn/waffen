@@ -1,49 +1,341 @@
-<ul class="tabs__btns scroll">
-  <li>
-    <button class="tabs__btn tabs__btn--active" type="button" data-tab-target="alle">
-      alle
-    </button>
-  </li>
+<form class="filter scroll" action="#">
+  <div class="filter__top">
+    <button class="filter__close title title--card" type="button">
+      zumachen
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="waffe">
-      waffe
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 14.7998L14.2225 0.824073M15 14.7755L1.77746 0.799805" stroke="#1B1B1B" stroke-width="2" />
+      </svg>
     </button>
-  </li>
+  </div>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="magazine">
-      magazine
-    </button>
-  </li>
+  <div class="filter__blocks">
+    <div class="filter__group">
+      <button class="filter__toggle title title--card" type="button">
+        Warengruppen
+      </button>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="munition">
-      munition
-    </button>
-  </li>
+      <ul class="filter__group-list scroll">
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Automaten
+            </span>
+          </label>
+        </li>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="waffenteile">
-      waffenteile
-    </button>
-  </li>
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Automaten
+            </span>
+          </label>
+        </li>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="optik">
-      optik
-    </button>
-  </li>
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Automaten
+            </span>
+          </label>
+        </li>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="zubehör">
-      zubehör
-    </button>
-  </li>
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Automaten
+            </span>
+          </label>
+        </li>
 
-  <li>
-    <button class="tabs__btn" type="button" data-tab-target="vorankündigung">
-      vorankündigung
-    </button>
-  </li>
-</ul>
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Automaten
+            </span>
+          </label>
+        </li>
+
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Freie Waffen <br>
+              (teils WES Pflichtig)
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Halbautomaten
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Karabiner
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Lever Action
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Pump Action
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Faustfeuerwaffen
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="filter__group">
+      <button class="filter__toggle title title--card" type="button">
+        Hersteller
+      </button>
+
+      <ul class="filter__group-list scroll">
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              B&T AG
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Barnaul
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Baikal
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Benelli
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Beretta
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Bergara
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Blaser
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Bul Armory
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Baikal
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Benelli
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              Beretta
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="filter__group">
+      <button class="filter__toggle title title--card" type="button">
+        Caliber
+      </button>
+
+      <ul class="filter__group-list scroll">
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              9mm
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              9mm Para
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              9.3 × 62mm
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              308 Win.
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              7.65
+            </span>
+          </label>
+        </li>
+
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              12/89
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              7.63
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              22
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              25
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              31
+            </span>
+          </label>
+        </li>
+
+        <li class="filter__group-item">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">
+              35
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="filter__btn btn btn--reverse" type="submit">
+    Zeigen
+  </button>
+</form>

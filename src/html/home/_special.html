@@ -5,50 +5,225 @@
   </h2>
 
   <div class="tabs__content">
-    @include('../parts/_filter.html')
+    @include('../parts/_tabs-btn.html')
 
-    <ul class="tabs__cards" data-tab-content="alle">
-      @loop('../parts/_card.html',[{
-      new:'<span class="waffen__status">Neu</span>',
-      sale:'<span class="waffen__sale">-15%</span>',
-      image:'sig',
-      code:'ffw3550',
-      name:'SIG P320 RX Fullsize Pistole',
-      desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
-      price:'1 450 CHF',
-      oldprice:'1 800 CHF'
-      },
-      {
-      new:'<span class="waffen__status">Neu</span>',
-      sale:'<span class="waffen__sale">-15%</span>',
-      image:'apc9',
-      code:'AA195',
-      name:'B&T APC9 Pro G Maschinenpistole',
-      desc:'Kal. 9mm Para Neuwaffe',
-      price:'2 650 CHF',
-      oldprice:'3 100 CHF'
-      },
-      {
-      new:'<span class="waffen__status">Neu</span>',
-      sale:'<span class="waffen__sale">-15%</span>',
-      image:'spc9',
-      code:'AA182',
-      name:'B&T SPC9 SD PDW Halbautomat',
-      desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
-      price:'3 190 CHF',
-      oldprice:'3 560 CHF'
-      },
-      {
-      new:'<span class="waffen__status">Neu</span>',
-      sale:'<span class="waffen__sale">-15%</span>',
-      image:'cz',
-      code:'AA191',
-      name:'CZ Full Auto BREN 2 Br',
-      desc:'Full Auto LL 16" Kal. 308 Win.',
-      price:'4 850 CHF',
-      oldprice:'5 000 CHF'
-      }])
-    </ul>
+    <div class="tabs__content-list">
+      <ul class="tabs__cards tabs__cards--active" data-tab-content="alle">
+        @loop('../parts/_card.html',[{
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'sig',
+        code:'ffw3550',
+        name:'SIG P320 RX Fullsize Pistole',
+        desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+        price:'1 450 CHF',
+        oldprice:'1 800 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'apc9',
+        code:'AA195',
+        name:'B&T APC9 Pro G Maschinenpistole',
+        desc:'Kal. 9mm Para Neuwaffe',
+        price:'2 650 CHF',
+        oldprice:'3 100 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'spc9',
+        code:'AA182',
+        name:'B&T SPC9 SD PDW Halbautomat',
+        desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+        price:'3 190 CHF',
+        oldprice:'3 560 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'cz',
+        code:'AA191',
+        name:'CZ Full Auto BREN 2 Br',
+        desc:'Full Auto LL 16" Kal. 308 Win.',
+        price:'4 850 CHF',
+        oldprice:'5 000 CHF'
+        }])
+      </ul>
+
+      <ul class="tabs__cards" data-tab-content="waffen">
+        @loop('../parts/_card.html',[{
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'sig',
+        code:'ffw3550',
+        name:'SIG P320 RX Fullsize Pistole',
+        desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+        price:'1 450 CHF',
+        oldprice:'1 800 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'apc9',
+        code:'AA195',
+        name:'B&T APC9 Pro G Maschinenpistole',
+        desc:'Kal. 9mm Para Neuwaffe',
+        price:'2 650 CHF',
+        oldprice:'3 100 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'spc9',
+        code:'AA182',
+        name:'B&T SPC9 SD PDW Halbautomat',
+        desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+        price:'3 190 CHF',
+        oldprice:'3 560 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'cz',
+        code:'AA191',
+        name:'CZ Full Auto BREN 2 Br',
+        desc:'Full Auto LL 16" Kal. 308 Win.',
+        price:'4 850 CHF',
+        oldprice:'5 000 CHF'
+        }])
+      </ul>
+
+      <ul class="tabs__cards" data-tab-content="magazine">
+        @loop('../parts/_card.html',[{
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'sig',
+        code:'ffw3550',
+        name:'SIG P320 RX Fullsize Pistole',
+        desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+        price:'1 450 CHF',
+        oldprice:'1 800 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'apc9',
+        code:'AA195',
+        name:'B&T APC9 Pro G Maschinenpistole',
+        desc:'Kal. 9mm Para Neuwaffe',
+        price:'2 650 CHF',
+        oldprice:'3 100 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'spc9',
+        code:'AA182',
+        name:'B&T SPC9 SD PDW Halbautomat',
+        desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+        price:'3 190 CHF',
+        oldprice:'3 560 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'cz',
+        code:'AA191',
+        name:'CZ Full Auto BREN 2 Br',
+        desc:'Full Auto LL 16" Kal. 308 Win.',
+        price:'4 850 CHF',
+        oldprice:'5 000 CHF'
+        }])
+      </ul>
+
+
+      <ul class="tabs__cards" data-tab-content="munition">
+        @loop('../parts/_card.html',[{
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'sig',
+        code:'ffw3550',
+        name:'SIG P320 RX Fullsize Pistole',
+        desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+        price:'1 450 CHF',
+        oldprice:'1 800 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'apc9',
+        code:'AA195',
+        name:'B&T APC9 Pro G Maschinenpistole',
+        desc:'Kal. 9mm Para Neuwaffe',
+        price:'2 650 CHF',
+        oldprice:'3 100 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'spc9',
+        code:'AA182',
+        name:'B&T SPC9 SD PDW Halbautomat',
+        desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+        price:'3 190 CHF',
+        oldprice:'3 560 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'cz',
+        code:'AA191',
+        name:'CZ Full Auto BREN 2 Br',
+        desc:'Full Auto LL 16" Kal. 308 Win.',
+        price:'4 850 CHF',
+        oldprice:'5 000 CHF'
+        }])
+      </ul>
+
+      <ul class="tabs__cards" data-tab-content="waffenteile">
+        @loop('../parts/_card.html',[{
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'sig',
+        code:'ffw3550',
+        name:'SIG P320 RX Fullsize Pistole',
+        desc:'Kal. 9mm mit SIG Sight Romeo1 Neuwaffe',
+        price:'1 450 CHF',
+        oldprice:'1 800 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'apc9',
+        code:'AA195',
+        name:'B&T APC9 Pro G Maschinenpistole',
+        desc:'Kal. 9mm Para Neuwaffe',
+        price:'2 650 CHF',
+        oldprice:'3 100 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'spc9',
+        code:'AA182',
+        name:'B&T SPC9 SD PDW Halbautomat',
+        desc:'Kal. 9mm Para mit integriertem Schalldämpfer',
+        price:'3 190 CHF',
+        oldprice:'3 560 CHF'
+        },
+        {
+        new:'<span class="waffen__status">Neu</span>',
+        sale:'<span class="waffen__sale">-15%</span>',
+        image:'cz',
+        code:'AA191',
+        name:'CZ Full Auto BREN 2 Br',
+        desc:'Full Auto LL 16" Kal. 308 Win.',
+        price:'4 850 CHF',
+        oldprice:'5 000 CHF'
+        }])
+      </ul>
+    </div>
   </div>
 
   <a class="tabs__more btn btn-reset" href="#">

@@ -1,0 +1,165 @@
+.page {
+  height: 100%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "pnum"on, "lnum"on;
+  font-size: 1.3vw;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  -webkit-text-size-adjust: 100%;
+  color: var(--color-white);
+  background-color: var(--color-bg);
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+  }
+
+  @include for-width(+desktop) {
+    font-size: 22px;
+  }
+
+  @include for-width(-laptop-mac) {
+    font-size: 16px;
+  }
+}
+
+.site-container {
+  @include flex;
+
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+
+
+}
+
+.section {
+  margin-bottom: clamp(100px, rem(190), 190px);
+
+  @include for-width(-laptop) {
+    margin-bottom: clamp(70px, rem(140), 140px);
+  }
+
+  @include for-width(-laptop-mac) {
+    margin-bottom: clamp(40px, rem(100), 100px);
+  }
+}
+
+.input-reset {
+  border-color: transparent;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: var(--color-noactive);
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  transform: translateY(-50%);
+
+  @include for-width(-tablet) {
+    display: none;
+  }
+
+  &--mob {
+    @include for-width(-tablet) {
+      display: block;
+    }
+  }
+}
+
+.main {
+  padding-top: rem(170);
+
+  &--clean {
+    padding-top: 0;
+  }
+}
+
+.map {
+  position: relative;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0.4;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.scroll {
+  overflow: auto;
+  padding-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--color-active);
+  }
+}

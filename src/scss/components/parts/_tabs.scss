@@ -15,10 +15,32 @@
     }
   }
 
+  &__content-list {
+    position: relative;
+    overflow: hidden;
+  }
+
   &__cards {
+    position: absolute;
+    top: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
     gap: 30px;
+
+    &--active {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0);
+      animation: carusel-home 0.6s ease;
+    }
 
     @include for-width(-laptop-mac) {
       grid-template-columns: repeat(2, minmax(275px, 420px));
@@ -29,13 +51,9 @@
       gap: 15px;
     }
 
-    @include for-width(-mobile-l) {
-      // grid-template-columns: repeat(2, minmax(265px, 1fr));
-    }
-
     @include for-width(-mobile-md) {
       grid-template-columns: 1fr;
-      max-width: 375px;
+      max-width: 475px;
       gap: 25px;
     }
   }
@@ -50,17 +68,37 @@
         margin-right: clamp(15px, rem(30), 30px);
 
         @include for-width(-laptop) {
-          margin-right: clamp(10px, rem(20), 20px);
+          margin-right: clamp(10px, rem(10), 20px);
         }
 
         @include for-width(-laptop-mac) {
           margin-right: 0;
-          margin-bottom: clamp(10px, rem(20), 20px);
+          margin-bottom: clamp(10px, rem(10), 20px);
         }
 
         @include for-width(-mobile-l) {
-          margin-right: clamp(10px, rem(20), 20px);
+          margin-right: clamp(10px, rem(10), 20px);
           margin-bottom: 0;
+        }
+      }
+    }
+
+    &--catalog.tabs__btns {
+      position: relative;
+      display: flex;
+      margin-bottom: clamp(10px, rem(32), 45px);
+      max-width: none;
+
+      li {
+        @include for-width(-laptop-mac) {
+          &:not(:last-child) {
+            margin-right: clamp(15px, rem(30), 30px);
+
+            @include for-width(-mobile-l) {
+              margin-right: clamp(10px, rem(20), 20px);
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }
@@ -142,6 +180,17 @@
 
     @include for-width(-mobile-md) {
       width: 100%;
+      max-width: 475px;
     }
+  }
+}
+
+@keyframes carusel-home {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translate(0);
   }
 }

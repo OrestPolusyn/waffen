@@ -1,0 +1,52 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-bottom: 0.5px solid var(--color-black);
+  padding: 35px 0 30px;
+  width: 100%;
+  background-color: rgba(27, 27, 27, 0.8);
+  transition: top 0.3s ease-in-out;
+
+  &__inner {
+    @include for-width(-tablet) {
+      @include flex-v-center;
+    }
+  }
+
+  &__action {
+    @include flex-all-sb;
+
+    .header__phone {
+      @include for-width(-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__phone {
+    font-size: 22px;
+  }
+
+  &__logo-mob {
+    display: none;
+    max-width: 70px;
+
+    @include for-width(-tablet) {
+      display: block;
+      margin-right: auto;
+    }
+  }
+
+  &.hide {
+    top: calc(var(--header-height) * -1);
+  }
+
+  @include for-width(-laptop) {
+    padding: 20px 0;
+  }
+
+  @include for-width(-tablet) {
+    background-color: rgba(27, 27, 27, 1);
+  }
+}

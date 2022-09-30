@@ -1,0 +1,26 @@
+.error-page {
+  padding: clamp(15px, rem(50), 50px) 0;
+
+  &__content {
+    font-size: 22px;
+  }
+
+  &__image {
+    margin: 0 auto rem(75);
+  }
+
+  &__message {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 625px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .logo {
+    margin-bottom: rem(70);
+    transform: translate(0);
+  }
+}

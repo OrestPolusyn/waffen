@@ -14,6 +14,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_hederHide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/_hederHide */ "./src/js/components/_hederHide.js");
 /* harmony import */ var _components_hederHide__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_hederHide__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_catalogFilter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/_catalogFilter */ "./src/js/components/_catalogFilter.js");
+/* harmony import */ var _components_catalogFilter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_catalogFilter__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -129,6 +132,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/_catalogFilter.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/_catalogFilter.js ***!
+  \*********************************************/
+/***/ (() => {
+
+const filterBtn = document.querySelector(".sort__filter-btn");
+const filterBtnClose = document.querySelector(".filter__close");
+const filterForm = document.querySelector(".filter");
+const main = document.querySelector(".main");
+const body = document.querySelector("body");
+filterBtn === null || filterBtn === void 0 ? void 0 : filterBtn.addEventListener("click", () => {
+  filterForm.classList.add("filter--active");
+  main.classList.add("catalog-filter");
+  body.classList.add("dis-scroll");
+});
+filterBtnClose === null || filterBtnClose === void 0 ? void 0 : filterBtnClose.addEventListener("click", () => {
+  filterForm.classList.remove("filter--active");
+  main.classList.remove("catalog-filter");
+  body.classList.remove("dis-scroll");
+});
+
+/***/ }),
+
 /***/ "./src/js/components/_header-height.js":
 /*!*********************************************!*\
   !*** ./src/js/components/_header-height.js ***!
@@ -214,7 +241,26 @@ getHeaderHeight();
   \************************************/
 /***/ (() => {
 
+const buttons = document.querySelectorAll("[data-tab-target]");
+const sections = document.querySelectorAll("[data-tab-content]");
+buttons.forEach(btn => {
+  btn.addEventListener("click", e => {
+    const listSet = e.target.dataset.tabTarget;
+    const currentBtn = e.target.closest(".tabs__content").querySelectorAll("[data-tab-target]");
+    const currentSections = e.target.closest(".tabs__content").querySelectorAll("[data-tab-content]");
+    currentBtn.forEach(item => {
+      item.classList.remove("tabs__btn--active");
+    });
+    e.target.classList.add("tabs__btn--active");
+    currentSections.forEach(item => {
+      item.classList.remove("tabs__cards--active");
 
+      if (item.dataset.tabContent === listSet) {
+        item.classList.add("tabs__cards--active");
+      }
+    });
+  });
+});
 
 /***/ }),
 
