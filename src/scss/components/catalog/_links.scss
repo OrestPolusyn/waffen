@@ -1,0 +1,40 @@
+.links {
+  @include flex-all-sb;
+
+  margin-bottom: clamp(20px, rem(40), 50px);
+
+  li {
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include for-width(-laptop-mac) {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  a {
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: underline;
+
+    @include for-width(-laptop-mac) {
+      white-space: inherit;
+    }
+  }
+
+  @include for-width(-laptop-mac) {
+    display: block;
+    column-count: 3;
+    text-align: center;
+  }
+
+  @include for-width(-mobile-l) {
+    column-count: 2;
+  }
+
+  @include for-width(-mobile-sl) {
+    column-count: 1;
+  }
+}

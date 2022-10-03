@@ -3,36 +3,8 @@
 
   &__columns {
     display: grid;
-    grid-template-columns: 1.8fr 1.1fr 1.5fr 1.2fr;
+    grid-template-columns: minmax(400px, 1.8fr) minmax(260px, 1.1fr) minmax(350px, 1.5fr) minmax(260px, 1.2fr);
     gap: rem(30);
-
-    @include for-width(-laptop-mac) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  &__column {
-    &:nth-child(3) {
-      @include for-width(-laptop-mac) {
-        order: 2;
-      }
-    }
-
-    &:nth-child(2) {
-      @include for-width(-laptop-mac) {
-        order: 3;
-      }
-    }
-
-    &:nth-child(4) {
-      @include for-width(-laptop-mac) {
-        order: 4;
-      }
-    }
-
-    @include for-width(-laptop-mac) {
-      justify-self: center;
-    }
   }
 
   &__title {

@@ -1,0 +1,79 @@
+<section class="order section">
+
+  <form class="order__form" action="#">
+    <div class="order__form-inner">
+      <h2 class="order__title title title--name">
+        Kasse
+      </h2>
+      <div class="order__fields">
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="text" name="vorname" placeholder="Vorname">
+        </label>
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="text" name="nachname" placeholder="Nachname">
+        </label>
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="email" name="email" placeholder="E-Mail">
+        </label>
+      </div>
+    </div>
+
+    <div class="order__form-inner">
+      <h2 class="order__title title title--name">
+        Versandart auswählen oder ändern
+      </h2>
+
+      <div class="order__form-check">
+
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Wird im Laden abgeholt
+          </span>
+        </label>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Versand per Post <span>(Bis 30kg Fr. 15.00
+              ab 30kg/ab 1m Fr. 30.00 Sperrgut)</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="order__fields">
+        <label class="order__label">
+          <input class="order__input input-reset" type="tel" name="tel" placeholder="Telefon">
+        </label>
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="text" name="adress" placeholder="Adresse">
+        </label>
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="text" name="zip" placeholder="Postleitzahl">
+        </label>
+
+        <label class="order__label">
+          <input class="order__input input-reset" type="text" name="city" placeholder="Stadt">
+        </label>
+      </div>
+    </div>
+
+    <label class="order__policy custom-checkbox">
+      <input type="checkbox" class="custom-checkbox__field">
+      <span class="custom-checkbox__content">
+        Bitte lesen und bestätigen Sie Ihr Einverständnis mit den <a href="#">Allgemeinen</a> Geschäftsbedingungen.
+      </span>
+    </label>
+
+    <button class="order__btn btn" type="submit">
+      Bestellen
+    </button>
+
+  </form>
+
+</section>

@@ -69,19 +69,21 @@
 }
 
 .section {
-  margin-bottom: clamp(100px, rem(190), 190px);
+  margin-bottom: clamp(70px, rem(140), 150px);
 
   @include for-width(-laptop) {
-    margin-bottom: clamp(70px, rem(140), 140px);
+    margin-bottom: clamp(50px, rem(100), 100px);
   }
 
   @include for-width(-laptop-mac) {
-    margin-bottom: clamp(40px, rem(100), 100px);
+    margin-bottom: clamp(40px, rem(80), 80px);
   }
 }
 
 .input-reset {
   border-color: transparent;
+  padding: 15px 30px;
+  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
@@ -140,8 +142,10 @@
 
 .scroll {
   overflow: auto;
-  padding-right: 5px;
+  padding-right: 10px;
   padding-bottom: 10px;
+  scrollbar-color: var(--color-active) var(--color-white);
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -157,7 +161,7 @@
   &::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: var(--color-active);
+    background-color: var(--color-active);
   }
 }
 
@@ -180,5 +184,17 @@
     opacity: 0.4;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
+  }
+}
+
+.close-icon {
+  width: 14px;
+  height: 14px;
+  stroke: var(--color-black);
+
+  &--cart {
+    width: 15px;
+    height: 15px;
+    stroke: var(--color-white);
   }
 }

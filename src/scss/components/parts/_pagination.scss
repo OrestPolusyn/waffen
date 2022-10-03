@@ -1,0 +1,37 @@
+.pagination {
+  @include flex-all-center;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  a {
+    @include flex-all-center;
+
+    width: 40px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+    color: var(--color-gray);
+    background-color: var(--color-noactive);
+
+    &.active {
+      color: var(--color-active);
+      background-color: var(--color-white);
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: flex-end;
+    width: 28px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 1;
+  }
+}

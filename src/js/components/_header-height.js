@@ -6,3 +6,7 @@ export const getHeaderHeight = () => {
 };
 
 getHeaderHeight();
+
+window.addEventListener("resize", () => {
+  getHeaderHeight();
+});

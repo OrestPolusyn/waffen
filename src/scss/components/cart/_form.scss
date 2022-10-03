@@ -1,0 +1,103 @@
+.order {
+  &__label {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: clamp(20px, rem(40), 50px);
+
+      @include for-width(-laptop-mac) {
+        margin-right: 20px;
+      }
+
+      @include for-width(-tablet) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__form {
+    >* {
+      &:not(:last-child) {
+        margin-bottom: rem(60);
+      }
+    }
+  }
+
+  &__fields {
+    display: flex;
+
+    @include for-width(-tablet) {
+      display: block;
+    }
+  }
+
+  &__form-check {
+    display: flex;
+    margin-bottom: rem(60);
+
+    .custom-checkbox {
+      &__content {
+        display: flex;
+        align-items: flex-start;
+        max-width: 400px;
+
+        span {
+          display: contents;
+          font-size: 18px;
+          color: var(--color-noactive);
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: clamp(20px, rem(40), 50px);
+      }
+
+      @include for-width(-mobile-sl) {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include for-width(-mobile-sl) {
+      display: block;
+    }
+  }
+
+  &__policy {
+    display: flex;
+    max-width: 500px;
+    font-size: 18px;
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include for-width(-tablet) {
+      max-width: none;
+    }
+  }
+
+  &__btn {
+    @include for-width(-tablet) {
+      margin-left: auto;
+    }
+
+    @include for-width(-mobile-md) {
+      width: 100%;
+    }
+  }
+
+  .custom-checkbox {
+    font-size: 22px;
+
+    &__content {
+
+      &::before,
+      &::after {
+        top: 0;
+        transform: translateY(5px);
+      }
+    }
+  }
+}

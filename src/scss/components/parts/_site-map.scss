@@ -10,16 +10,26 @@
 
     @include for-width(-tablet) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: rem(20);
     }
 
     @include for-width(-mobile-md) {
       grid-template-columns: 1fr;
+      margin: 0 auto;
+      max-width: 300px;
     }
   }
 
   &__column {
     &:not(:last-child) {
       margin-right: rem(40);
+    }
+
+    &:first-child {
+      @include for-width(-tablet) {
+        grid-row: 1 / span 3;
+      }
     }
   }
 

@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#111111">
     <title>Joray Marius Waffen und Feinmechanik AG | Sortiment</title>
@@ -25,7 +25,8 @@
   <div class="container">
     <div class="header__inner">
       <a class="header__logo-mob" href="#">
-        <img class="header__logo-img" src="./img/logо-mob.svg" alt="Joray Marius Waffen und Feinmechanik AG logo" width="150" height="100">
+        <img class="header__logo-img" src="./img/logо-mob.svg" alt="Joray Marius Waffen und Feinmechanik AG logo"
+          width="150" height="100">
       </a>
 
       <nav class="nav" data-menu>
@@ -36,7 +37,47 @@
             </a>
 
             <ul class="nav__dropdown">
-              <li class="nav__dropdown-item"></li>
+              <li>
+                <a href="#">
+                  Waffen
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Munition
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Magazine
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Waffenteile
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Optik
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Zubehör
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Vorankündigung
+                </a>
+              </li>
             </ul>
           </li>
 
@@ -53,24 +94,14 @@
           </li>
 
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--dropdown">
-              Zu Kunden
-            </a>
-
-            <ul class="nav__dropdown">
-              <li class="nav__dropdown-item"></li>
-            </ul>
-          </li>
-
-          <li class="nav__item">
             <a href="#" class="nav__link">
               Kontakt
             </a>
           </li>
 
           <li class="nav__item nav__item--mob">
-            <a class="nav__link" href="tel:+41(061)7614055">
-              +41 (061) 761 40 55
+            <a class="nav__link" href="tel:+41617614055">
+              +41 61 761 40 55
             </a>
           </li>
         </ul>
@@ -82,8 +113,8 @@
       </a>
 
       <div class="header__action">
-        <a class="header__phone" href="tel:+41(061)7614055">
-          +41 (061) 761 40 55
+        <a class="header__phone" href="tel:+41617614055">
+          +41 61 761 40 55
         </a>
 
         <form class="search-form" action="#">
@@ -212,7 +243,7 @@
     Munition list
   </h2>
 
-  <div class="munition__columns">
+  <div class="munition__columns scroll">
     <div class="munition__column">
       <a class="munition__title" href="#" >
         Jagdmunition Kugel
@@ -769,14 +800,14 @@
       </h3>
     </a>
 
-    <div class="waffen__desc">
-      <button class="waffen__munition-btn btn" type="button">
+    <div class="bullet-count">
+      <button class="bullet-count__btn btn" type="button">
         <span>
           50 stk.
         </span>
       </button>
 
-      <ul class="waffen__munition-list">
+      <ul class="bullet-count__list">
         <li>
           50 stk.
         </li>
@@ -983,14 +1014,14 @@
       </h3>
     </a>
 
-    <div class="waffen__desc">
-      <button class="waffen__munition-btn btn" type="button">
+    <div class="bullet-count">
+      <button class="bullet-count__btn btn" type="button">
         <span>
           50 stk.
         </span>
       </button>
 
-      <ul class="waffen__munition-list">
+      <ul class="bullet-count__list">
         <li>
           50 stk.
         </li>
@@ -1197,14 +1228,14 @@
       </h3>
     </a>
 
-    <div class="waffen__desc">
-      <button class="waffen__munition-btn btn" type="button">
+    <div class="bullet-count">
+      <button class="bullet-count__btn btn" type="button">
         <span>
           50 stk.
         </span>
       </button>
 
-      <ul class="waffen__munition-list">
+      <ul class="bullet-count__list">
         <li>
           50 stk.
         </li>
@@ -1411,14 +1442,14 @@
       </h3>
     </a>
 
-    <div class="waffen__desc">
-      <button class="waffen__munition-btn btn" type="button">
+    <div class="bullet-count">
+      <button class="bullet-count__btn btn" type="button">
         <span>
           50 stk.
         </span>
       </button>
 
-      <ul class="waffen__munition-list">
+      <ul class="bullet-count__list">
         <li>
           50 stk.
         </li>
@@ -1551,13 +1582,46 @@
 </section>
 
 
+          <ul class="pagination">
+  <li>
+    <a class="active" href="#">
+      1
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      2
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      3
+    </a>
+  </li>
+
+  <li>
+    <span>
+      ...
+    </span>
+  </li>
+
+  <li>
+    <a href="#">
+      10
+    </a>
+  </li>
+</ul>
+
+
           <form class="filter scroll" action="#">
   <div class="filter__top">
     <button class="filter__close title title--card" type="button">
       zumachen
 
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 14.7998L14.2225 0.824073M15 14.7755L1.77746 0.799805" stroke="#1B1B1B" stroke-width="2" />
+      <svg class="close-icon">
+        <use xlink:href="img/sprite.svg#close"></use>
       </svg>
     </button>
   </div>
@@ -1905,7 +1969,7 @@
     <ul class="footer__list">
 
       <li class="footer__item footer__item--copy">
-        (c) 2022 Joray Marius Waffen und Feinmechanik AG
+        &copy; 2022 Joray Marius Waffen und Feinmechanik AG
       </li>
 
       <li class="footer__item footer__item--logo">
@@ -1941,10 +2005,6 @@
       </li>
 
       <li class="footer__item footer__item--mark">
-        <span>
-          Auf Bestellung:
-        </span>
-
         <a href="#">
           <img class="image" src="./img/markupers.svg" width="220" height="35" loading="lazy"
             alt="Visit website Markupers.com">
@@ -1952,14 +2012,51 @@
       </li>
 
       <li class="footer__item footer__item--policy">
-        <a href="#">
-          Datenschutz-Bestimmungen
-        </a>
+        <span>
+          Allgemeine
+        </span>
+
+        <ul class="footer__policy-list">
+          <li class="footer__item">
+            <a href="#">
+              partners
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a href="#">
+              Datenschutz-Bestimmungen
+            </a>
+          </li>
+        </ul>
       </li>
+
+
     </ul>
 
   </div>
 </footer>
+
+
+<div class="coockie">
+  <div class="coockie__inner">
+    <p>
+      hre Daten sind uns wichtig und wir würden gerne <a href="#">
+        Cookies verwenden
+      </a>
+    </p>
+
+    <div class="coockie__btns">
+      <button class="coockie__btn" type="button">
+        Nein danke
+      </button>
+
+      <button class="coockie__btn coockie__btn--border" type="button">
+        Okay!
+      </button>
+    </div>
+  </div>
+</div>
 
   </div>
 </body>

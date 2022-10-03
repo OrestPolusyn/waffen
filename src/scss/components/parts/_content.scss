@@ -1,5 +1,5 @@
 .title {
-  @include adaptive_size("font-size", 80, 25);
+  @include adaptive_size("font-size", 60, 25);
 
   margin-bottom: 50px;
   font-weight: 700;
@@ -18,18 +18,18 @@
   }
 
   &--main {
-    @include adaptive_size("font-size", 120, 60);
+    @include adaptive_size("font-size", 80, 60);
 
     margin-bottom: 10px;
     font-weight: 800;
 
     @include for-width(+desktop) {
-      font-size: 120px;
+      font-size: 90px;
     }
   }
 
   &--name {
-    @include adaptive_size("font-size", 29, 18);
+    @include adaptive_size("font-size", 29, 22);
 
     font-weight: 500;
     letter-spacing: 0.05em;

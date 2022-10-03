@@ -26,11 +26,6 @@
     background-color: var(--color-white);
     cursor: pointer;
 
-    svg {
-      width: 14px;
-      height: 14px;
-    }
-
     @include for-width(-tablet) {
       font-size: 21px;
     }

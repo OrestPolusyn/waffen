@@ -1,0 +1,27 @@
+@include('html/_head.html',{
+title:'Warenkorb'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+
+        @include('./html/cart/_calculator.html')
+
+        @include('./html/cart/_form.html')
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
+
+    @include('./html/cart/_message.html')
+
+  </div>
+</body>
+
+</html>

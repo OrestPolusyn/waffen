@@ -1,6 +1,7 @@
 .single-nav {
   @include flex-all-sb;
 
+  flex-wrap: wrap;
   margin-bottom: clamp(20px, rem(35), 50px);
   width: 100%;
   font-size: 18px;
@@ -8,6 +9,7 @@
 
   a {
     position: relative;
+    display: flex;
     text-decoration: underline;
   }
 
@@ -35,9 +37,15 @@
       a {
         padding-left: 35px;
       }
+
+      @include for-width(-mobile-l) {
+        margin-bottom: 20px;
+      }
     }
 
     &:last-child {
+      margin-left: auto;
+
       &::before {
         right: 0;
         transform: translateY(-50%);
@@ -45,6 +53,10 @@
 
       a {
         padding-right: 35px;
+
+        @include for-width(-mobile-l) {
+          text-align: end;
+        }
       }
     }
   }

@@ -1,0 +1,42 @@
+.coockie {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: rem(30) rem(50);
+  width: 100%;
+  max-width: 500px;
+  font-size: 18px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+
+  &__btns {
+    @include flex-all-sb;
+  }
+
+  &__btn {
+    padding: 8px 10px;
+    width: 100%;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:first-child {
+      text-decoration: underline;
+    }
+
+    &--border {
+      border-color: var(--color-black);
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

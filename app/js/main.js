@@ -16,6 +16,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hederHide__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_hederHide__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_catalogFilter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/_catalogFilter */ "./src/js/components/_catalogFilter.js");
 /* harmony import */ var _components_catalogFilter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_catalogFilter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_sliderThumbs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/_sliderThumbs */ "./src/js/components/_sliderThumbs.js");
+/* harmony import */ var _components_sliderThumbs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_sliderThumbs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_copyCode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_copyCode */ "./src/js/components/_copyCode.js");
+/* harmony import */ var _components_copyCode__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_copyCode__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_bulletCount__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_bulletCount */ "./src/js/components/_bulletCount.js");
+/* harmony import */ var _components_bulletCount__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_bulletCount__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_cartCounter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_cartCounter */ "./src/js/components/_cartCounter.js");
+/* harmony import */ var _components_cartCounter__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_cartCounter__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_headerSearch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_headerSearch */ "./src/js/components/_headerSearch.js");
+/* harmony import */ var _components_headerSearch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_headerSearch__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_headerLink__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_headerLink */ "./src/js/components/_headerLink.js");
+/* harmony import */ var _components_headerLink__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_headerLink__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
 
 
 
@@ -132,6 +150,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/_bulletCount.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/_bulletCount.js ***!
+  \*******************************************/
+/***/ (() => {
+
+document.addEventListener("click", e => {
+  if (!e.target.matches(".bullet-count__btn")) {
+    document.querySelectorAll(".bullet-count__list").forEach(item => {
+      item.classList.remove("bullet-count__list--active");
+    });
+    return;
+  } else {
+    e.target.nextElementSibling.classList.add("bullet-count__list--active");
+  }
+});
+document.addEventListener("click", e => {
+  if (!e.target.matches(".bullet-count__list li")) return;
+  e.target.closest(".bullet-count").querySelector(".bullet-count__btn span").innerText = e.target.innerText;
+  e.target.closest(".bullet-count__list").classList.remove("bullet-count__list--active");
+});
+
+/***/ }),
+
+/***/ "./src/js/components/_cartCounter.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/_cartCounter.js ***!
+  \*******************************************/
+/***/ (() => {
+
+const calcItem = document.querySelectorAll("[data-calc]");
+document.addEventListener("click", e => {
+  if (!e.target.matches("[data-calc]")) return;
+
+  if (e.target.matches("[data-calc='minus']")) {
+    const inputValue = e.target.closest(".cart-page__number").querySelector("input");
+
+    if (inputValue.value > 1) {
+      inputValue.value = +inputValue.value - 1;
+    } else {
+      inputValue.value = 1;
+    }
+
+    calcValue(e, inputValue.value);
+  }
+
+  if (e.target.matches("[data-calc='plus']")) {
+    const inputValue = e.target.closest(".cart-page__number").querySelector("input");
+    inputValue.value = +inputValue.value + 1;
+    calcValue(e, inputValue.value);
+  }
+});
+document.querySelectorAll(".cart-page__window").forEach(item => {
+  item.querySelector("input").addEventListener("keyup", e => {
+    if (e.target.value === " " || e.target.value < 1) {
+      e.target.value = 1;
+    }
+
+    calcValue(e, e.target.value);
+  });
+});
+
+function calcValue(e, value) {
+  const priceItem = parseInt(e.target.closest(".cart-page__number").previousElementSibling.querySelector(".cart-page__value span").innerText.replace(/[^\d]/g, ""));
+  let priceItemFinal = e.target.closest(".cart-page__number").nextElementSibling.querySelector(".cart-page__price span");
+  priceItemFinal.innerText = (value * priceItem).toString().replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, " ");
+  totalPrice();
+}
+
+function totalPrice() {
+  const totalText = document.querySelector(".cart-page__total");
+  const totalAll = document.querySelectorAll(".cart-page__price span:first-child");
+  let totalNumber = 0;
+  totalAll.forEach(item => {
+    const totalValue = parseInt(item.innerText.replace(/[^\d]/g, ""));
+    totalNumber = totalNumber + totalValue;
+  });
+
+  if (totalText) {
+    totalText.innerText = totalNumber.toString().replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/gm, " ");
+  }
+}
+
+totalPrice();
+
+/***/ }),
+
 /***/ "./src/js/components/_catalogFilter.js":
 /*!*********************************************!*\
   !*** ./src/js/components/_catalogFilter.js ***!
@@ -156,6 +261,21 @@ filterBtnClose === null || filterBtnClose === void 0 ? void 0 : filterBtnClose.a
 
 /***/ }),
 
+/***/ "./src/js/components/_copyCode.js":
+/*!****************************************!*\
+  !*** ./src/js/components/_copyCode.js ***!
+  \****************************************/
+/***/ (() => {
+
+document.addEventListener("click", e => {
+  if (!e.target.matches(".single__code-copy")) return;
+  const textContent = e.target.querySelector("span").innerText.trim();
+  navigator.clipboard.writeText(textContent);
+  if (!navigator.clipboard.writeText(textContent)) return;
+});
+
+/***/ }),
+
 /***/ "./src/js/components/_header-height.js":
 /*!*********************************************!*\
   !*** ./src/js/components/_header-height.js ***!
@@ -174,6 +294,43 @@ const getHeaderHeight = () => {
   document.querySelector(":root").style.setProperty("--header-height", `${headerHeight}px`);
 };
 getHeaderHeight();
+window.addEventListener("resize", () => {
+  getHeaderHeight();
+});
+
+/***/ }),
+
+/***/ "./src/js/components/_headerLink.js":
+/*!******************************************!*\
+  !*** ./src/js/components/_headerLink.js ***!
+  \******************************************/
+/***/ (() => {
+
+document.addEventListener("click", e => {
+  if (!e.target.matches(".nav__link--dropdown")) {
+    document.querySelector(".nav__dropdown").classList.remove("nav__dropdown--active");
+  } else {
+    e.target.nextElementSibling.classList.add("nav__dropdown--active");
+  }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/_headerSearch.js":
+/*!********************************************!*\
+  !*** ./src/js/components/_headerSearch.js ***!
+  \********************************************/
+/***/ (() => {
+
+document.querySelector("#search").addEventListener("keyup", e => {
+  if (!e.target.matches(".search-form__input")) return;
+
+  if (e.target.value.length > 0) {
+    e.target.classList.add("active");
+  } else {
+    e.target.classList.remove("active");
+  }
+});
 
 /***/ }),
 
@@ -232,6 +389,26 @@ getHeaderHeight();
 
   window.addEventListener("scroll", checkScroll);
 })();
+
+/***/ }),
+
+/***/ "./src/js/components/_sliderThumbs.js":
+/*!********************************************!*\
+  !*** ./src/js/components/_sliderThumbs.js ***!
+  \********************************************/
+/***/ (() => {
+
+const thumbnails = document.querySelectorAll(".single__thumbnail-link");
+thumbnails.forEach(item => {
+  item.addEventListener("click", e => {
+    e.preventDefault();
+    thumbnails.forEach(item => {
+      item.classList.remove("single__thumbnail-link--active");
+    });
+    e.target.classList.add("single__thumbnail-link--active");
+    document.querySelector("#single__image").src = e.target.href;
+  });
+});
 
 /***/ }),
 

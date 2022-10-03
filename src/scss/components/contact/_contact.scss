@@ -9,7 +9,6 @@
     @include for-width(-laptop-mac) {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
-      grid-template-rows: repeat(2, 1fr);
       margin: 0 auto;
       max-width: 900px;
       gap: 30px;
@@ -80,7 +79,7 @@
 
     &--pin {
       &::before {
-        left: 5px;
+        left: 2px;
         top: -2px;
         mask-image: url("../img/sprite.svg#pin");
         width: 26px;

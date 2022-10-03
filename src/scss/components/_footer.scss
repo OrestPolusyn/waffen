@@ -5,31 +5,37 @@
 
   &__list {
     display: grid;
-    column-gap: 20px;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
-    row-gap: rem(60);
+    gap: 20px;
 
-    @include for-width(-mobile-md) {
+    @include for-width(-mobile-sl) {
       justify-items: center;
       grid-template-columns: 1fr;
-      text-align: center;
       margin: 0 auto;
+      text-align: center;
       gap: 30px;
     }
   }
 
   &__item {
-    font-size: 22px;
+    font-size: 20px;
 
     &--copy {
       align-self: center;
       width: 100%;
       max-width: 325px;
 
-      @include for-width(-mobile-md) {
-        order: 1;
+      @include for-width(-mobile-l) {
+        order: 5;
+        grid-column: 2 / span 2;
+        max-width: none;
+        text-align: end;
+      }
+
+      @include for-width(-mobile-sl) {
+        grid-column: auto;
       }
     }
 
@@ -37,12 +43,16 @@
       align-self: center;
       justify-self: center;
       grid-area: 1/2/3/2;
+      width: 100%;
+      max-width: 200px;
 
       @include for-width(-tablet) {
+        justify-self: start;
         grid-area: 1/1/2/2;
+        max-width: fit-content;
       }
 
-      @include for-width(-mobile-md) {
+      @include for-width(-mobile-sl) {
         order: -1;
         grid-area: auto;
       }
@@ -76,36 +86,116 @@
         }
       }
 
-      @include for-width(-tablet) {
-        grid-column: 1/ span 2;
+      @include for-width(-mobile-l) {
+        order: 4;
       }
 
-      @include for-width(-mobile-md) {
+      @include for-width(-mobile-sl) {
         display: block;
-        order: 1;
         grid-column: auto;
       }
     }
 
     &--policy {
       text-align: end;
+
+      span {
+        display: inline-block;
+        margin-bottom: 10px;
+
+        @include for-width(-tablet) {
+          margin-bottom: 0;
+        }
+
+        @include for-width(-mobile-sl) {
+          margin-bottom: 5px;
+        }
+      }
+
+      @include for-width(-tablet) {
+        display: grid;
+        column-gap: 20px;
+        grid-column: 2 / span 2;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include for-width(-mobile-l) {
+        grid-column: 1 / span 3;
+        margin: 0 auto;
+        max-width: 445px;
+      }
+
+      @include for-width(-mobile-sl) {
+        display: block;
+        grid-column: auto;
+        text-align: center;
+      }
     }
 
     &--social {
       align-self: center;
       justify-self: end;
 
-      @include for-width(-mobile-md) {
-        justify-self: center;
+      @include for-width(-mobile-l) {
+        grid-column: 2 / span 2;
+      }
+
+      @include for-width(-mobile-sl) {
+        grid-column: auto;
       }
     }
 
     @include for-width(-tablet) {
       font-size: 19px;
     }
+
+    @include for-width(-mobile-sl) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__policy-list {
+    font-size: 22px;
+    text-transform: capitalize;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+
+        @include for-width(-tablet) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      text-decoration: underline;
+      text-transform: inherit;
+    }
+
+    @include for-width(-tablet) {
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-md) {
+      gap: 10px;
+    }
+
+    @include for-width(-mobile-sl) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .logo {
     position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }

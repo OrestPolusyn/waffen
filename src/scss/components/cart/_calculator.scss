@@ -1,0 +1,227 @@
+.cart-page {
+  margin-bottom: 50px;
+
+  &__item {
+    @include flex-all-sb;
+
+    position: relative;
+    border-bottom: 1px solid var(--color-noactive);
+    padding-bottom: clamp(30px, rem(40), 50px);
+
+    &:not(:last-child) {
+      margin-bottom: clamp(30px, rem(40), 50px);
+    }
+
+    @include for-width(-mobile-l) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-sl) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__items {
+    margin-bottom: clamp(30px, rem(40), 50px);
+  }
+
+  &__item-desc {
+    @include flex-v-center;
+
+    margin-right: 20px;
+
+    @include for-width(-tablet) {
+      flex-direction: column-reverse;
+      max-width: 300px;
+    }
+
+    @include for-width(-mobile-sl) {
+      margin: 0;
+      max-width: none;
+    }
+  }
+
+  &__item-title {
+    font-size: 22px;
+
+    @include for-width(-laptop-mac) {
+      font-size: 20px;
+    }
+
+    @include for-width(-tablet) {
+      margin-bottom: 20px;
+    }
+
+    @include for-width(-mobile-sl) {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  &__picture {
+    margin-right: 30px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+
+    img {
+      width: 100%;
+    }
+
+    @include for-width(-tablet) {
+      margin-right: 0;
+    }
+
+    @include for-width(-mobile-md) {
+      min-width: auto;
+    }
+
+    @include for-width(-mobile-sl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__values {
+    @include flex-v-center;
+
+    margin-left: auto;
+
+    >* {
+      &:not(:last-child) {
+        margin-right: clamp(20px, rem(30), 45px);
+
+        @include for-width(-laptop) {
+          margin-right: 20px;
+        }
+
+        @include for-width(-laptop-mac) {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    >span {
+      min-width: 150px;
+      font-weight: 500;
+      font-size: 25px;
+      white-space: nowrap;
+      text-transform: uppercase;
+
+      @include for-width(-laptop-mac) {
+        min-width: 110px;
+        font-size: 20px;
+      }
+
+      @include for-width(-mobile-l) {
+        min-width: auto;
+      }
+    }
+
+    @include for-width(-mobile-l) {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+
+  &__action {
+    .bullet-count {
+      margin: 0 auto;
+      max-width: 150px;
+      transform: translateX(rem(-20));
+
+      @include for-width(-laptop) {
+        transform: translateX(-17px);
+      }
+
+      @include for-width(-laptop-mac) {
+        transform: translateX(-12px);
+      }
+
+      @include for-width(-tablet) {
+        transform: translateX(-18px);
+      }
+
+      @include for-width(-mobile-l) {
+        transform: translateX(-6px);
+      }
+    }
+  }
+
+  &__number {
+    @include flex-all-center;
+
+    >* {
+      &:not(:last-child) {
+        margin-right: clamp(10px, rem(15), 25px);
+
+        @include for-width(-laptop-mac) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__window {
+    @include flex-all-center;
+
+    padding: 9px 15px;
+    width: 70px;
+    text-align: center;
+    background-color: var(--color-white);
+
+    input {
+      width: 50px;
+      font-size: 22px;
+      text-align: center;
+      color: var(--color-active);
+    }
+  }
+
+  &__icon {
+    z-index: -1;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-white);
+
+    &--minus {
+      width: 20px;
+      height: 4px;
+    }
+  }
+
+  &__final {
+    font-weight: 500;
+    font-size: 29px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  &__delete {
+    width: 25px;
+    height: 25px;
+
+    @include for-width(-mobile-l) {
+      justify-self: end;
+      order: -1;
+    }
+
+    @include for-width(-mobile-sl) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    width: 24px;
+    height: 26px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}

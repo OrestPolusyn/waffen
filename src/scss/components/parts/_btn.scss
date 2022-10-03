@@ -5,13 +5,14 @@
 
 .btn {
   @include flex-all-center;
-  @include adaptive_size("font-size", 22, 16);
+  @include adaptive_size("font-size", 22, 18);
 
   border: 1px solid var(--color-active);
   padding: 21px clamp(20px, rem(35), 50px);
   width: fit-content;
   color: var(--color-active);
   background-color: var(--color-white);
+  cursor: pointer;
 
   &--reverse {
     color: var(--color-white);
