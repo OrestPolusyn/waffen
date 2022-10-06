@@ -9,3 +9,4 @@ import "./components/_bulletCount";
 import "./components/_cartCounter";
 import "./components/_headerSearch";
 import "./components/_headerLink";
+import "./components/_animation";

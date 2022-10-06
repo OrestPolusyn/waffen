@@ -2,7 +2,7 @@
   @include flex-v-center;
 
   position: relative;
-  min-height: 100vh;
+  height: var(--vh);
 
   &::before {
     content: "";
@@ -41,7 +41,7 @@
     border: 2px solid var(--color-white);
     border-radius: 100px;
     width: 40px;
-    height: 60px;
+    min-height: 60px;
 
     &::before {
       content: "";
