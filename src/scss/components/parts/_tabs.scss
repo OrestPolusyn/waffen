@@ -35,6 +35,11 @@
     transition-timing-function: ease;
     gap: 30px;
 
+    li {
+      position: relative;
+      z-index: 5;
+    }
+
     &--active {
       position: relative;
       opacity: 1;

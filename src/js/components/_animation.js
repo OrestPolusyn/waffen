@@ -5,6 +5,7 @@ sr.reveal(".hero__title", {
   delay: "200",
   origin: "top",
   opacity: 0,
+  mobile: false,
   viewFactor: 0,
   reset: true,
 });
@@ -17,6 +18,7 @@ sr.reveal(".header", {
   origin: "top",
   opacity: 0,
   viewFactor: 0,
+  mobile: false,
   reset: true,
 });
 
@@ -26,6 +28,7 @@ sr.reveal(".footer", {
   easing: "ease",
   delay: "500",
   origin: "bottom",
+  mobile: false,
   opacity: 0,
   viewFactor: 0,
   reset: true,
@@ -37,6 +40,7 @@ sr.reveal(".hero__btn", {
   easing: "ease",
   delay: "800",
   origin: "bottom",
+  mobile: false,
   opacity: 0,
   viewFactor: 0,
   reset: true,
@@ -49,6 +53,7 @@ sr.reveal(".hero__mouse", {
   delay: "1300",
   origin: "bottom",
   opacity: 0,
+  mobile: false,
   viewFactor: 0,
   reset: true,
 });
@@ -61,6 +66,7 @@ sr.reveal(".title:not(.title--card, .title--name)", {
   origin: "top",
   opacity: 0,
   viewFactor: 0,
+  mobile: false,
   reset: true,
 });
 
@@ -71,7 +77,7 @@ sr.reveal(".tabs__btns > *", {
   delay: "100",
   origin: "left",
   opacity: 0,
-  viewFactor: 0,
+  mobile: false,
   reset: true,
   interval: 200,
 });
@@ -84,6 +90,7 @@ sr.reveal(".tabs__cards--active > *", {
   origin: "top",
   opacity: 0,
   viewFactor: 0,
+  mobile: false,
   reset: true,
   interval: 200,
 });
@@ -93,6 +100,7 @@ sr.reveal(".categories__item", {
   delay: "500",
   opacity: 0,
   viewFactor: 0,
+  mobile: false,
   reset: true,
   interval: 200,
 });
@@ -103,6 +111,7 @@ sr.reveal(".tabs__more, .contact", {
   delay: "500",
   opacity: 0,
   viewFactor: 0,
+  mobile: false,
   reset: true,
   interval: 200,
 });
@@ -112,7 +121,16 @@ sr.reveal(".tabs__more, .contact", {
   easing: "ease",
   delay: "500",
   opacity: 0,
+  mobile: false,
   viewFactor: 0,
   reset: true,
   interval: 200,
+});
+
+const link = document.querySelectorAll(".calendar-gallery a");
+
+link.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 });

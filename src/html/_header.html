@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header fixed-block">
   <div class="container">
     <div class="header__inner">
       <a class="header__logo-mob" href="#">
@@ -9,49 +9,49 @@
       <nav class="nav" data-menu>
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--dropdown">
+            <span class="nav__link nav__link--dropdown">
               Sortiment
-            </a>
+            </span>
 
             <ul class="nav__dropdown">
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Waffen
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Munition
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Magazine
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Waffenteile
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Optik
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Zubehör
                 </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
                   Vorankündigung
                 </a>
               </li>
@@ -113,8 +113,8 @@
           </button>
         </form>
 
-        <div class="cart cart--active">
-          <a class="cart__link" href="#">
+        <div class="cart ">
+          <span class="cart__link">
             <svg class="cart__icon">
               <use xlink:href="img/sprite.svg#cart"></use>
             </svg>
@@ -126,7 +126,71 @@
             <span class="cart__count">
               1
             </span>
-          </a>
+          </span>
+
+          <div class="cart__preview">
+            <span class="cart__preview-title title title--name">
+              Produkt
+            </span>
+
+            <ul class="cart__preview-list">
+              <li class="cart__preview-item">
+                <div class="cart__preview-picture">
+                  <img loading="lazy" src="./img/cards/sig.jpg" width="130" height="100">
+                </div>
+
+                <div class="cart__preview-content">
+                  <p class="cart__preview-subtitle">
+                    SIG P320 RX Fullsize Pistole
+                  </p>
+
+                  <div class="cart__preview-text">
+                    <span>
+                      1 450 CHF
+                    </span>
+
+                    <span>
+                      <span>1</span>
+                      stück
+                    </span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cart__preview-item">
+                <div class="cart__preview-picture">
+                  <img loading="lazy" src="./img/cards/9mm.jpg" width="130" height="100">
+                </div>
+
+                <div class="cart__preview-content">
+                  <p class="cart__preview-subtitle">
+                    9mm Para FMJ SX Ruag Swiss Munition
+                    E-Mail
+                  </p>
+
+                  <div class="cart__preview-text">
+                    <span>
+                      78 CHF
+                    </span>
+
+                    <span>
+                      <span>3</span>
+                      stück
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a class="cart__preview-link" href="#">
+              Bestellung ändern (zum wagen)
+            </a>
+
+            <div class="cart__preview-total title title--name">
+              <span>Gesamt:</span>
+              <span>1 528 </span> <span>CHF</span>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -74,6 +74,7 @@
     &--dropdown {
       position: relative;
       padding-right: 30px;
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -102,6 +103,7 @@
   &__dropdown {
     position: absolute;
     top: 20%;
+    z-index: 1;
     width: 320px;
     color: var(--color-black);
     background-color: var(--color-white);
@@ -112,18 +114,24 @@
     transition-duration: 0.2s;
     transition-timing-function: ease;
 
-    a {
-      display: block;
-      padding: 10px;
-
-      &:focus {
-        color: var(--color-white);
-        background-color: var(--color-active);
+    .nav {
+      &__item {
+        margin: 0;
       }
 
-      &:hover {
-        color: var(--color-white);
-        background-color: var(--color-active);
+      &__link {
+        display: block;
+        padding: 10px;
+
+        &:focus {
+          color: var(--color-white);
+          background-color: var(--color-active);
+        }
+
+        &:hover {
+          color: var(--color-white);
+          background-color: var(--color-active);
+        }
       }
     }
 

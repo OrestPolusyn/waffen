@@ -54,14 +54,25 @@
     text-transform: uppercase;
   }
 
+  &__order {
+    margin-top: auto;
 
+    >* {
+      &:not(.addtocart-bar) {
+        margin-bottom: clamp(20px, rem(25), 30px);
+      }
+    }
+  }
 
   &__price {
     @include flex-sb;
 
     align-items: flex-start;
     margin-top: auto;
-    margin-bottom: 30px;
+  }
+
+  &__desc {
+    margin-bottom: 20px;
   }
 
   &__price-new {
@@ -82,6 +93,11 @@
     font-size: 22px;
     color: var(--color-black);
     cursor: pointer;
+
+    &--disabled {
+      border-color: var(--color-noactive);
+      color: var(--color-noactive);
+    }
   }
 
   h3 {

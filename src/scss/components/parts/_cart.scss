@@ -1,9 +1,16 @@
 .cart {
-  position: relative;
   color: var(--color-noactive);
 
   &__link {
     @include flex-v-center;
+
+    position: relative;
+    cursor: pointer;
+
+    >* {
+      position: relative;
+      z-index: -1;
+    }
   }
 
   &__icon {
@@ -30,6 +37,7 @@
   }
 
   &__price {
+    margin-left: 15px;
     white-space: nowrap;
 
     @include for-width(-tablet) {
@@ -40,8 +48,21 @@
   &--active {
     color: var(--color-white);
 
-    .cart__icon {
-      margin-right: 15px;
+    .cart {
+      &__icon {
+        fill: transparent;
+        stroke: var(--color-active);
+      }
+
+      &__count {
+        color: var(--color-active);
+        background-color: var(--color-white);
+      }
+
+      &__preview {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }

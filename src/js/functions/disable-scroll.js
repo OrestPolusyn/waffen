@@ -13,4 +13,6 @@ export const disableScroll = () => {
   vars.bodyEl.classList.add("dis-scroll");
   vars.bodyEl.dataset.position = pagePosition;
   vars.bodyEl.style.top = `-${pagePosition}px`;
+
+  console.log(pagePosition);
 };

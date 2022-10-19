@@ -23,6 +23,10 @@ ol {
   list-style: none;
 }
 
+li {
+  list-style: none;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -117,6 +121,11 @@ button {
   border-color: transparent;
   width: fit-content;
   background-color: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
 }
 
 input {
