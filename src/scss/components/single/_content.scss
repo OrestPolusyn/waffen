@@ -143,15 +143,27 @@
     display: flex;
 
     .bullet-count {
+      position: relative;
       margin-right: 50px;
       margin-bottom: 0;
       width: 100%;
       max-width: 170px;
 
-      &__btn {
-        margin-top: 0;
+      .choices {
         height: 100%;
-        max-height: none;
+
+        &__list {
+          &:first-of-type {
+            height: 100%;
+            max-height: none;
+            font-size: 22px;
+          }
+        }
+
+        &__inner {
+          height: 100%;
+          max-height: none;
+        }
       }
 
       @include for-width(-mobile-l) {

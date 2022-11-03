@@ -82,7 +82,7 @@ sr.reveal(".tabs__btns > *", {
   interval: 200,
 });
 
-sr.reveal(".tabs__cards--active > *", {
+sr.reveal(".tabs__content-box--active > *", {
   duration: 700,
   distance: "50px",
   easing: "ease",

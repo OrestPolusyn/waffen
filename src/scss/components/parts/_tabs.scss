@@ -21,31 +21,35 @@
     overflow: hidden;
   }
 
-  &__cards {
+  &__content-box {
     position: absolute;
     top: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     width: 100%;
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
     transition-property: opacity, visibility, transform;
-    transition-duration: 0.6s;
+    transition-duration: 0.5s;
     transition-timing-function: ease;
-    gap: 30px;
-
-    li {
-      position: relative;
-      z-index: 5;
-    }
 
     &--active {
       position: relative;
       opacity: 1;
       visibility: visible;
       transform: translate(0);
-      animation: carusel-home 0.6s ease;
+      animation: carusel-home 0.5s ease;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    margin-bottom: rem(30);
+    gap: 30px;
+
+    li {
+      position: relative;
+      z-index: 5;
     }
 
     @include for-width(-laptop-mac) {

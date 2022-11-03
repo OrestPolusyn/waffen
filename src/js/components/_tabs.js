@@ -20,10 +20,10 @@ buttons.forEach((btn) => {
     e.target.classList.add("tabs__btn--active");
 
     currentSections.forEach((item) => {
-      item.classList.remove("tabs__cards--active");
+      item.classList.remove("tabs__content-box--active");
 
       if (item.dataset.tabContent === listSet) {
-        item.classList.add("tabs__cards--active");
+        item.classList.add("tabs__content-box--active");
       }
     });
   });
