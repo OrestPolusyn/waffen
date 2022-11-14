@@ -184,11 +184,16 @@
   }
 
   &__related {
+    height: fit-content;
     max-width: 390px;
+
+    img {
+      margin-bottom: rem(30);
+    }
 
     >* {
       &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: rem(30);
       }
     }
   }

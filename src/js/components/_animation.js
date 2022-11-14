@@ -1,8 +1,8 @@
 sr.reveal(".hero__title", {
-  duration: 1000,
+  duration: 700,
   distance: "20px",
   easing: "ease",
-  delay: "200",
+  delay: "150",
   origin: "top",
   opacity: 0,
   mobile: false,
@@ -11,10 +11,10 @@ sr.reveal(".hero__title", {
 });
 
 sr.reveal(".header", {
-  duration: 1000,
+  duration: 800,
   distance: "100%",
   easing: "ease",
-  delay: "1300",
+  delay: "800",
   origin: "top",
   opacity: 0,
   viewFactor: 0,
@@ -22,23 +22,11 @@ sr.reveal(".header", {
   reset: true,
 });
 
-sr.reveal(".footer", {
-  duration: 800,
-  distance: "100%",
-  easing: "ease",
-  delay: "500",
-  origin: "bottom",
-  mobile: false,
-  opacity: 0,
-  viewFactor: 0,
-  reset: true,
-});
-
 sr.reveal(".hero__btn", {
-  duration: 1000,
+  duration: 800,
   distance: "30px",
   easing: "ease",
-  delay: "800",
+  delay: "600",
   origin: "bottom",
   mobile: false,
   opacity: 0,
@@ -58,7 +46,19 @@ sr.reveal(".hero__mouse", {
   reset: true,
 });
 
-sr.reveal(".title:not(.title--card, .title--name)", {
+sr.reveal(".coockie", {
+  duration: 700,
+  distance: "30px",
+  easing: "ease",
+  delay: "2000",
+  origin: "right",
+  opacity: 0,
+  mobile: false,
+  viewFactor: 0,
+  reset: true,
+});
+
+sr.reveal(".title:not(.title--card, .title--name, .cart-message__title)", {
   duration: 500,
   distance: "20px",
   easing: "ease",
@@ -116,7 +116,7 @@ sr.reveal(".tabs__more, .contact", {
   interval: 200,
 });
 
-sr.reveal(".tabs__more, .contact", {
+sr.reveal(".tabs__more, .contact,.map", {
   duration: 700,
   easing: "ease",
   delay: "500",

@@ -1,6 +1,42 @@
 .pagination {
   @include flex-all-center;
 
+  .pagination-start,
+  .pagination-end {
+    display: none;
+  }
+
+  .pagination-previous a,
+  .pagination-next a {
+    position: relative;
+    font-size: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      z-index: 0;
+      mask-image: url("../img/sprite.svg#arrow");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      margin: 0 auto;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-white);
+      transform: translateY(-50%) rotate(var(--rotate));
+    }
+  }
+
+  .pagination-previous a {
+    --rotate: 180deg;
+  }
+
+  .pagination-next a {
+    --rotate: 0;
+  }
+
   li {
     &:not(:last-child) {
       margin-right: 20px;

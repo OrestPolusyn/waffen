@@ -18,6 +18,10 @@
         margin-right: 0;
         margin-bottom: rem(25);
       }
+
+      @include for-width(-mobile-l) {
+        margin-bottom: rem(15);
+      }
     }
 
     &:nth-child(2) {
@@ -48,10 +52,11 @@
   }
 
   &__link {
-    @include adaptive_size("font-size", 22, 16);
-
     display: block;
-    transition: color 0.2s linear;
+    font-size: 22px;
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
 
     &:focus {
       color: var(--color-active);
@@ -153,8 +158,8 @@
   }
 
   a {
-    font-weight: 400;
     font-size: 22px;
+    font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -179,7 +184,7 @@
     padding-right: 25px;
     padding-left: 25px;
     width: 100%;
-    height: calc(100vh - var(--header-height) + 1px);
+    height: calc(var(--vh) - var(--header-height) + 1px);
     max-width: 320px;
     background-color: var(--color-bg);
     transform: translateX(-100%);

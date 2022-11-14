@@ -12,7 +12,20 @@
   width: fit-content;
   color: var(--color-active);
   background-color: var(--color-white);
+  transition-property: color, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
   cursor: pointer;
+
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--color-active);
+  }
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-active);
+  }
 
   &--reverse {
     color: var(--color-white);

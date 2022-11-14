@@ -27,6 +27,10 @@
       width: 100%;
       max-width: 325px;
 
+      @include for-width(-tablet) {
+        text-align: center;
+      }
+
       @include for-width(-mobile-l) {
         order: 5;
         grid-column: 2 / span 2;
@@ -49,7 +53,6 @@
       @include for-width(-tablet) {
         justify-self: start;
         grid-area: 1/1/2/2;
-        max-width: fit-content;
       }
 
       @include for-width(-mobile-sl) {
@@ -125,10 +128,13 @@
         max-width: 445px;
       }
 
-      @include for-width(-mobile-sl) {
+      @include for-width(-mobile-md) {
         display: block;
-        grid-column: auto;
         text-align: center;
+      }
+
+      @include for-width(-mobile-sl) {
+        grid-column: auto;
       }
     }
 
@@ -177,15 +183,16 @@
 
     @include for-width(-tablet) {
       display: grid;
-      column-gap: 20px;
       grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
     }
 
-    @include for-width(-mobile-md) {
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    @include for-width(-mobile-sl) {
+    @include for-width(-mobile-md) {
       grid-template-columns: 1fr;
     }
   }

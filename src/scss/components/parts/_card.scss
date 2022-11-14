@@ -50,6 +50,12 @@
     @include flex-all-sb;
   }
 
+  &__info-name {
+    @include flex-v-center;
+
+    min-height: 57px;
+  }
+
   &__info-code {
     text-transform: uppercase;
   }
@@ -68,11 +74,15 @@
     @include flex-sb;
 
     align-items: flex-start;
-    margin-top: auto;
+    margin-top: rem(15);
+    margin-bottom: rem(25);
   }
 
   &__desc {
-    margin-bottom: 20px;
+    margin-bottom: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
   }
 
   &__price-new {
@@ -98,6 +108,13 @@
       border-color: var(--color-noactive);
       color: var(--color-noactive);
     }
+  }
+
+  form.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
   h3 {
@@ -144,7 +161,7 @@
     padding: 15px;
   }
 
-  @include for-width(-tablet) {
+  @include for-width(-modile-sl) {
     padding: 10px;
   }
 }

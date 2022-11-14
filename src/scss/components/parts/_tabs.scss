@@ -54,7 +54,7 @@
 
     @include for-width(-laptop-mac) {
       grid-template-columns: repeat(2, minmax(275px, 420px));
-      margin: 0 auto;
+      margin: 0 auto rem(30);
     }
 
     @include for-width(-tablet) {
@@ -62,6 +62,7 @@
     }
 
     @include for-width(-mobile-md) {
+      justify-content: center;
       grid-template-columns: 1fr;
       max-width: 475px;
       gap: 25px;
@@ -122,7 +123,7 @@
       padding: 0;
       width: 100%;
       height: fit-content;
-      max-width: 230px;
+      max-width: 160px;
     }
 
     @include for-width(-mobile-l) {
@@ -180,16 +181,11 @@
   &__more {
     @include for-width(-laptop-mac) {
       margin: 0 auto;
-      transform: translateX(65%);
-    }
-
-    @include for-width(-mobile-l) {
-      transform: translateX(0);
     }
 
     @include for-width(-mobile-md) {
       width: 100%;
-      max-width: 475px;
+      max-width: 477px;
     }
   }
 }

@@ -40,6 +40,8 @@
   &__preview-item {
     @include flex;
 
+    position: relative;
+
     &:not(:last-child) {
       margin-bottom: rem(30);
       border-bottom: 1px solid var(--color-noactive);
@@ -74,7 +76,7 @@
     min-height: 60px;
 
     @include for-width(-mobile-sl) {
-      min-height: auto
+      min-height: auto;
     }
   }
 
@@ -93,7 +95,7 @@
     width: 100%;
   }
 
-  &__preview-link a {
+  &__preview-link {
     position: relative;
     display: inline-block;
     font-weight: 400;
@@ -113,6 +115,20 @@
       height: 16px;
       background-color: currentColor;
       transform: translateY(-50%);
+
+      @include for-width(-mobile-s) {
+        right: 0;
+      }
+    }
+  }
+
+  &__preview-delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .close-icon {
+      stroke-width: 2px;
     }
   }
 

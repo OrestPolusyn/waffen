@@ -1,4 +1,4 @@
-document.querySelector("#search").addEventListener("keyup", (e) => {
+document.querySelector("#search")?.addEventListener("keyup", (e) => {
   if (!e.target.matches(".search-form__input")) return;
 
   if (e.target.value.length > 0) {
