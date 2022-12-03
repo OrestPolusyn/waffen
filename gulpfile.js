@@ -13,12 +13,10 @@ const fileInclude = require("gulp-file-include");
 const rev = require("gulp-rev");
 const revRewrite = require("gulp-rev-rewrite");
 const revDel = require("gulp-rev-delete-original");
-const htmlmin = require("gulp-htmlmin");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
 const image = require("gulp-imagemin");
 const { readFileSync } = require("fs");
-// const typograf = require('gulp-typograf');
 const webp = require("gulp-webp");
 const avif = require("gulp-avif");
 const mainSass = gulpSass(sass);
@@ -338,16 +336,6 @@ const rewrite = () => {
     .pipe(dest(buildFolder));
 };
 
-const htmlMinify = () => {
-  return src(`${buildFolder}/**/*.html`)
-    .pipe(
-      htmlmin({
-        collapseWhitespace: true,
-      })
-    )
-    .pipe(dest(buildFolder));
-};
-
 const zipFiles = (done) => {
   del.sync([`${buildFolder}/*.zip`]);
   return src(`${buildFolder}/**/*.*`, {})
@@ -403,8 +391,7 @@ exports.build = series(
   images,
   webpImages,
   avifImages,
-  svgSprites,
-  htmlMinify
+  svgSprites
 );
 
 exports.cache = series(cache, rewrite);

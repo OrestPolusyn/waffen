@@ -126,8 +126,15 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
 
     .close-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
       stroke-width: 2px;
     }
   }

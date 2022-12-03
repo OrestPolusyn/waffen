@@ -130,8 +130,16 @@
 .main {
   padding-top: rem(185);
 
-  &--clean.main {
-    padding-top: 0;
+  .hero {
+    margin-top: rem(-185);
+
+    @include for-width(-laptop-mac) {
+      margin-top: rem(-150);
+    }
+
+    @include for-width(-tablet) {
+      margin-top: rem(-125);
+    }
   }
 
   @include for-width(-laptop-mac) {
@@ -146,24 +154,13 @@
 .map {
   position: relative;
   margin: 0 auto;
+  width: 87%;
+  min-height: 300px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
+  iframe {
+    @include flex-all-center;
+
     width: 100%;
-    height: 100%;
-    background-color: var(--color-black);
-    opacity: 0.4;
-  }
-
-  &__image {
-    width: 100%;
-
-    @include for-width(-mobile-l) {
-      min-height: 300px;
-    }
   }
 }
 

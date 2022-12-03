@@ -27,7 +27,7 @@
     span {
       position: absolute;
 
-      &:first-of-type {
+      &.waffen__status {
         right: 0;
         top: 0;
         padding: 5px 10px;
@@ -35,7 +35,7 @@
         background-color: var(--color-active);
       }
 
-      &:last-of-type {
+      &.waffen__sale {
         left: 0;
         bottom: 0;
         border: 1px solid var(--color-active);
@@ -115,6 +115,20 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+
+    a {
+      position: relative;
+      z-index: 15;
+      display: inline;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .choices {
+      margin-top: 20px;
+    }
   }
 
   h3 {

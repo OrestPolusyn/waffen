@@ -1,7 +1,6 @@
 .single-nav {
   @include flex-all-sb;
 
-  flex-wrap: wrap;
   margin-bottom: clamp(20px, rem(35), 50px);
   width: 100%;
   font-size: 18px;
@@ -29,6 +28,8 @@
     }
 
     &:first-child {
+      margin-right: 20px;
+
       &::before {
         left: 0;
         transform: translateY(-50%) rotate(180deg);
@@ -38,7 +39,8 @@
         padding-left: 35px;
       }
 
-      @include for-width(-mobile-l) {
+      @include for-width(-mobile-md) {
+        margin-right: 0;
         margin-bottom: 20px;
       }
     }
@@ -58,6 +60,15 @@
           text-align: end;
         }
       }
+
+      @include for-width(-mobile-md) {
+        margin-left: 0;
+      }
     }
+  }
+
+  @include for-width(-mobile-md) {
+    flex-direction: column;
+    align-items: center;
   }
 }

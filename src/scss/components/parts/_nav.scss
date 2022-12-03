@@ -11,7 +11,7 @@
   }
 
   &__item {
-    &:not(:nth-child(4)) {
+    &:not(:nth-child(5)) {
       margin-right: clamp(25px, rem(45), 55px);
 
       @include for-width(-tablet) {
@@ -35,6 +35,44 @@
     &:nth-child(5) {
       @include for-width(-tablet) {
         margin-bottom: rem(25);
+      }
+    }
+
+    &.deeper {
+      position: relative;
+
+      >a {
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          mask-image: url(../img/sprite.svg#arrow);
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          width: 16px;
+          height: 16px;
+          background-color: currentColor;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      ul {
+        position: absolute;
+        right: calc(-100% - 1px);
+        top: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+      }
+
+      &:hover {
+        ul {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
 

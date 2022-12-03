@@ -2,6 +2,7 @@
   @include burger;
 
   display: block;
+  margin-left: 15px;
 
   @include for-width(+tablet) {
     display: none;

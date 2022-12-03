@@ -36,8 +36,11 @@
     }
 
     @include for-width(-mobile-sl) {
+      display: flex;
+      justify-content: space-around;
       justify-self: flex-end;
       order: 1;
+      width: 100%;
     }
   }
 
@@ -52,8 +55,6 @@
   }
 
   &__action {
-    @include flex-v-center;
-
     position: relative;
     margin-left: auto;
     font-size: 22px;
@@ -64,13 +65,31 @@
     }
 
     @include for-width(-mobile-l) {
-      justify-content: flex-end;
+      display: flex;
+      justify-content: space-between;
       margin-top: 20px;
       width: 100%;
     }
 
-    @include for-width(-mobile-sl) {
-      justify-content: center;
+    @include for-width(-mobile-md) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__action-list {
+    @include flex-v-center;
+  }
+
+  &__action-number {
+    margin-bottom: 10px;
+
+    @include for-width(-mobile-l) {
+      margin-bottom: 0;
+    }
+
+    @include for-width(-mobile-md) {
+      margin-bottom: 10px;
     }
   }
 

@@ -10,7 +10,7 @@ sr.reveal(".hero__title", {
   reset: true,
 });
 
-sr.reveal(".header", {
+sr.reveal(".header--home", {
   duration: 800,
   distance: "100%",
   easing: "ease",
@@ -58,7 +58,7 @@ sr.reveal(".coockie", {
   reset: true,
 });
 
-sr.reveal(".title:not(.title--card, .title--name, .cart-message__title)", {
+sr.reveal(".main--clean > .title, .agb__content > *", {
   duration: 500,
   distance: "20px",
   easing: "ease",
@@ -94,6 +94,7 @@ sr.reveal(".tabs__content-box--active > *", {
   reset: true,
   interval: 200,
 });
+
 sr.reveal(".categories__item", {
   duration: 700,
   easing: "ease",
@@ -116,7 +117,7 @@ sr.reveal(".tabs__more, .contact", {
   interval: 200,
 });
 
-sr.reveal(".tabs__more, .contact,.map", {
+sr.reveal(".tabs__more, .contact, .map", {
   duration: 700,
   easing: "ease",
   delay: "500",
@@ -125,12 +126,4 @@ sr.reveal(".tabs__more, .contact,.map", {
   viewFactor: 0,
   reset: true,
   interval: 200,
-});
-
-const link = document.querySelectorAll(".calendar-gallery a");
-
-link.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
 });

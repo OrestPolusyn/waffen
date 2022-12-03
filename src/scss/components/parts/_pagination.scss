@@ -27,6 +27,12 @@
       background-color: var(--color-white);
       transform: translateY(-50%) rotate(var(--rotate));
     }
+
+    &.active {
+      &::before {
+        background-color: var(--color-gray);
+      }
+    }
   }
 
   .pagination-previous a {
@@ -55,6 +61,21 @@
     text-transform: capitalize;
     color: var(--color-gray);
     background-color: var(--color-noactive);
+
+    &:not(.active) {
+      &::before {
+        background-color: var(--color-gray);
+      }
+
+      &:hover {
+        color: var(--color-red);
+        background-color: var(--color-white);
+
+        &::before {
+          background-color: var(--color-red);
+        }
+      }
+    }
 
     &.active {
       color: var(--color-active);
