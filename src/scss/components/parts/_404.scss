@@ -2,6 +2,7 @@
   @include flex-all-center;
 
   flex-direction: column;
+  margin-top: rem(-185);
   padding: clamp(15px, rem(50), 50px) 0;
   height: 100vh;
 
@@ -27,5 +28,13 @@
   .logo {
     position: relative;
     margin-bottom: auto;
+  }
+
+  @include for-width(-laptop-mac) {
+    margin-top: rem(-150);
+  }
+
+  @include for-width(-tablet) {
+    margin-top: rem(-125);
   }
 }

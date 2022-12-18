@@ -1,4 +1,5 @@
-.title {
+.title,
+.vmheader {
   @include adaptive_size("font-size", 60, 40);
 
   margin-bottom: 50px;

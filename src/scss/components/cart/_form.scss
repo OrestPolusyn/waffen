@@ -1,18 +1,11 @@
 .order {
-  &__label {
-    display: flex;
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30);
 
-    &:not(:last-child) {
-      margin-right: clamp(20px, rem(40), 50px);
-
-      @include for-width(-laptop-mac) {
-        margin-right: 20px;
-      }
-
-      @include for-width(-tablet) {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -21,14 +14,6 @@
       &:not(:last-child) {
         margin-bottom: rem(60);
       }
-    }
-  }
-
-  &__fields {
-    display: flex;
-
-    @include for-width(-tablet) {
-      display: block;
     }
   }
 
@@ -103,5 +88,9 @@
         transform: translateY(5px);
       }
     }
+  }
+
+  >*:not(:last-child) {
+    margin-bottom: clamp(15px, rem(30), 30px);
   }
 }

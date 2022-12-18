@@ -3,9 +3,13 @@
 
   &__list {
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    margin-bottom: clamp(30px, rem(40), 50px);
     gap: rem(30) rem(20);
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
   }
 
   &__link {
@@ -24,19 +28,34 @@
     &:hover {
       color: var(--color-active);
     }
+
+    @include for-width(-tablet) {
+      flex-direction: column;
+    }
+
+    @include for-width(-mobile-sl) {
+      flex-direction: row;
+    }
   }
 
   &__image {
     margin-left: clamp(15px, rem(25), 35px);
     width: 100%;
     height: auto;
-    max-width: 80px;
+    max-width: 180px;
     max-height: 80px;
     object-fit: contain;
 
     @include for-width(-laptop-mac) {
       margin-left: 15px;
-      max-width: 50px;
+    }
+
+    @include for-width(-mobile-sl) {
+      max-width: 150px;
+    }
+
+    @include for-width(-mobile-sm) {
+      max-width: 115px;
     }
   }
 

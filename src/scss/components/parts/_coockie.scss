@@ -30,8 +30,11 @@
     &.jb-accept {
       position: relative;
       overflow: hidden;
+      margin: 0;
+      border-radius: 0;
       padding: 8px 10px;
       width: 100%;
+      font-size: 18px;
       transition: box-shadow 0.2s ease;
       cursor: pointer;
 

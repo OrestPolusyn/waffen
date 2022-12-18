@@ -30,11 +30,11 @@
   &__phone {
     z-index: 0;
     font-size: 22px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
 
-    &:focus {
-      color: var(--color-active);
-    }
-
+    &:focus,
     &:hover {
       color: var(--color-active);
     }

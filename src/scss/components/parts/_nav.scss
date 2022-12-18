@@ -53,6 +53,12 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+        @include for-width(-tablet) {
+          position: relative;
+          right: -30px;
+          display: none;
+        }
       }
 
       &:hover,
@@ -60,13 +66,29 @@
         ul {
           opacity: 1;
           visibility: visible;
+
+          @include for-width(-tablet) {
+            display: block;
+          }
         }
       }
 
+      @include for-width(-tablet) {
+        overflow: hidden;
+      }
     }
 
     &--mob {
       display: none;
+
+      .nav__link {
+
+        &:hover,
+        &:focus {
+          color: var(--color-active);
+          background-color: transparent;
+        }
+      }
 
       @include for-width(-tablet) {
         display: block;
@@ -85,22 +107,9 @@
     transition-duration: 0.2s;
     transition-timing-function: linear;
 
-    &:focus {
-      color: var(--color-active);
-
-      @include for-width(-tablet) {
-        color: var(--color-white);
-        background-color: var(--color-active);
-      }
-    }
-
+    &:focus,
     &:hover {
       color: var(--color-active);
-
-      @include for-width(-tablet) {
-        color: var(--color-white);
-        background-color: var(--color-active);
-      }
     }
 
     &--dropdown {
@@ -153,6 +162,7 @@
       }
 
       &__link {
+        position: relative;
         display: block;
         padding: 10px;
 
@@ -256,6 +266,7 @@
     z-index: 2;
     width: 40px;
     height: 100%;
+    max-height: 50px;
     color: var(--color-active);
 
     &::before {
@@ -273,6 +284,10 @@
       background-color: currentColor;
       transform: translate(-50%, -50%);
       transition: background-color 0.3s ease;
+
+      @include for-width(-tablet) {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
     }
   }
 }
