@@ -18,6 +18,15 @@
     font-size: 22px;
     white-space: nowrap;
     text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:focus {
+      color: var(--color-active);
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
 
     @include for-width(-laptop-mac) {
       white-space: inherit;

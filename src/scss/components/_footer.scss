@@ -179,6 +179,15 @@
       white-space: nowrap;
       text-decoration: underline;
       text-transform: inherit;
+      transition: color 0.2s ease;
+
+      &:focus {
+        color: var(--color-active);
+      }
+
+      &:hover {
+        color: var(--color-active);
+      }
     }
 
     @include for-width(-tablet) {

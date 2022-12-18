@@ -34,7 +34,13 @@
           <li class="nav__item">
             <span class="nav__link nav__link--dropdown">Sortiment</span>
             <ul class="menu nav__dropdown">
-              <li class="nav__item item-296 active deeper parent"><a href="/waffen" class="nav__link">Waffen</a>
+              <li class="nav__item item-296 active deeper parent">
+
+                <a href="/waffen" class="nav__link">Waffen</a>
+
+                <button class="deeper__btn" type="button">
+                </button>
+
                 <ul class="nav-child unstyled small">
                   <li class="nav__item item-312 current active"><a href="/waffen/automaten"
                       class="nav__link">Automaten</a>
@@ -250,67 +256,60 @@
           <div class="sort">
   <button class="sort__filter-btn btn" type="button">
     <svg class="sort__icon">
-      <use xlink:href="img/sprite.svg#filter"></use>
+      <use xlink:href="templates/waffen/img/sprite.svg#filter"></use>
     </svg>
     Filter
   </button>
-
   <div class="sort__used">
-    <label class="custom-checkbox">
-      <input type="checkbox" class="custom-checkbox__field">
-      <span class="custom-checkbox__content">
-        Neu
-      </span>
+    <label for="radioCondition1" class="custom-checkbox">
+      <input id="radioCondition1" type="radio" class="custom-checkbox__field" checked="checked"
+        data-action="index.php?option=com_virtuemart&amp;view=category&amp;virtuemart_category_id=11&amp;virtuemart_manufacturer_id=0&amp;manage=0&amp;Itemid=160">
+      <span class="custom-checkbox__content">All</span>
     </label>
-
-    <label class="custom-checkbox">
-      <input type="checkbox" class="custom-checkbox__field">
-      <span class="custom-checkbox__content">
-        Gebraucht
-      </span>
+    <label for="radioCondition2" class="custom-checkbox">
+      <input id="radioCondition2" type="radio" class="custom-checkbox__field"
+        data-action="index.php?option=com_virtuemart&amp;view=category&amp;virtuemart_category_id=11&amp;virtuemart_manufacturer_id=0&amp;manage=0&amp;Itemid=160&amp;condition=1">
+      <span class="custom-checkbox__content">Neu</span>
+    </label>
+    <label for="radioCondition3" class="custom-checkbox">
+      <input id="radioCondition3" type="radio" class="custom-checkbox__field"
+        data-action="index.php?option=com_virtuemart&amp;view=category&amp;virtuemart_category_id=11&amp;virtuemart_manufacturer_id=0&amp;manage=0&amp;Itemid=160&amp;condition=2">
+      <span class="custom-checkbox__content">Gebraucht</span>
     </label>
   </div>
 
   <div class="sort__action">
-    <a class="sort__sort-link" href="#">
-      <svg class="sort__icon">
-        <use xlink:href="img/sprite.svg#sort"></use>
-      </svg>
-    </a>
-
-    <span class="sort__sort-title">
-      Sortieren:
-    </span>
-
-    <button class="sort__btn" type="button">
-      Nach Popularität
-    </button>
-
-    <ul class="sort__list">
-      <li>
-        <a href="#">
-          Produktbezeichnung
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          Produkt Artikelnummer
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          Hersteller Name
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          Produktpreis
-        </a>
-      </li>
-    </ul>
+    <div class="sort__action-number">
+      <div class="display-number">
+        Ergebnisse 1 - 50 von 248 <select id="limit" name="" class="choices__input  dropdown-select" size="1"
+          onchange="window.top.location.href=this.options[this.selectedIndex].value">
+          <option value="/munition?limit=15">15</option>
+          <option value="/munition?limit=30">30</option>
+          <option value="/munition?limit=50" selected="selected">50</option>
+          <option value="/munition?limit=60">60</option>
+          <option value="/munition?limit=150">150</option>
+        </select>
+      </div>
+    </div>
+    <div class="sort__action-list">
+      <a class="sort__sort-link" href="#">
+        <svg class="sort__icon">
+          <use xlink:href="/templates/waffen/img/sprite.svg#sort"></use>
+        </svg>
+      </a>
+      <span class="sort__sort-title">
+        Sortieren:
+      </span>
+      <button class="sort__btn" type="button">
+        Produkt Verkäufe
+      </button>
+      <ul class="sort__list">
+        <li><a title="Produktbezeichnung" href="/munition/by,product_name?manage=0">Produktbezeichnung</a></li>
+        <li><a title="Produkt Artikelnummer" href="/munition/by,product_sku?manage=0">Produkt Artikelnummer</a></li>
+        <li><a title="Hersteller Name" href="/munition/by,mf_name?manage=0">Hersteller Name</a></li>
+        <li><a title="Produktpreis" href="/munition/by,product_price?manage=0">Produktpreis</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -1590,7 +1589,7 @@
   </div>
 </footer>
 
-
+<!--
 <div class="coockie">
   <div class="coockie__inner">
     <p>
@@ -1609,7 +1608,7 @@
       </button>
     </div>
   </div>
-</div>
+</div> -->
 
   </div>
 </body>

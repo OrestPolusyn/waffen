@@ -17,6 +17,7 @@
     height: 28px;
     min-width: 30px;
     max-width: 32px;
+    /* stylelint-disable-next-line value-keyword-case */
     fill: currentColor;
   }
 
@@ -50,6 +51,8 @@
     color: var(--color-white);
 
     .cart {
+      max-height: 64vh;
+
       &__icon {
         fill: transparent;
         stroke: var(--color-active);

@@ -11,6 +11,8 @@
   }
 
   &__item {
+    position: relative;
+
     &:not(:nth-child(5)) {
       margin-right: clamp(25px, rem(45), 55px);
 
@@ -41,26 +43,11 @@
     &.deeper {
       position: relative;
 
-      >a {
-        &::before {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: 50%;
-          mask-image: url(../img/sprite.svg#arrow);
-          mask-repeat: no-repeat;
-          mask-size: contain;
-          width: 16px;
-          height: 16px;
-          background-color: currentColor;
-          transform: translate(-50%, -50%);
-        }
-      }
-
       ul {
         position: absolute;
         right: calc(-100% - 1px);
         top: 0;
+        z-index: 0;
         width: 100%;
         background-color: var(--color-white);
         opacity: 0;
@@ -68,12 +55,14 @@
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         ul {
           opacity: 1;
           visibility: visible;
         }
       }
+
     }
 
     &--mob {
@@ -129,6 +118,7 @@
         mask-size: contain;
         width: 16px;
         height: 16px;
+        /* stylelint-disable-next-line value-keyword-case */
         background-color: currentColor;
         transform: translateY(-50%) rotate(90deg);
 
@@ -166,14 +156,40 @@
         display: block;
         padding: 10px;
 
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          width: 0;
+          height: 100%;
+          background-color: var(--color-active);
+          transition: width 0.2s ease;
+        }
+
         &:focus {
           color: var(--color-white);
-          background-color: var(--color-active);
+
+          &::before {
+            width: 100%;
+          }
+
+          +.deeper__btn {
+            color: var(--color-white);
+          }
         }
 
         &:hover {
           color: var(--color-white);
-          background-color: var(--color-active);
+
+          &::before {
+            width: 100%;
+          }
+
+          +.deeper__btn {
+            color: var(--color-white);
+          }
         }
       }
     }
@@ -196,8 +212,8 @@
   }
 
   a {
-    font-size: 22px;
     font-weight: 400;
+    font-size: 22px;
     line-height: 1.6;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -227,5 +243,36 @@
     background-color: var(--color-bg);
     transform: translateX(-100%);
     transition: transform 0.2s ease-in-out;
+  }
+}
+
+.deeper {
+  &__btn {
+    @include flex-all-center;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 40px;
+    height: 100%;
+    color: var(--color-active);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      mask-image: url("../img/sprite.svg#arrow");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      width: 20px;
+      height: 20px;
+      /* stylelint-disable-next-line value-keyword-case */
+      background-color: currentColor;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease;
+    }
   }
 }

@@ -8,6 +8,5 @@ import "./components/_copyCode";
 import "./components/_headerSearch";
 import "./components/_headerLink";
 import "./components/_animation";
-import "./components/_cartPreview";
 import "./components/_selectDropdown";
 import "./components/_sortListCatalog";
